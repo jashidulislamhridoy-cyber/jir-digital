@@ -14,6 +14,10 @@ collections:
         label: Homepage
         file: data/homepage.json
         fields:
+          - label: Logo
+            name: logo
+            widget: image
+            required: false
           - label: Hero subtitle
             name: hero_subtitle
             widget: text
