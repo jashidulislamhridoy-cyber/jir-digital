@@ -7,9 +7,12 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 collections:
-  - name: "homepage"
-    label: "Homepage"
-    file: "data/homepage.json"
-    fields:
-      - { label: "Hero subtitle", name: "hero_subtitle", widget: "text" }
-      - { label: "Email", name: "email", widget: "string" }
+  - name: "site"
+    label: "Site content"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "data/homepage.json"
+        fields:
+          - { label: "Hero subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
