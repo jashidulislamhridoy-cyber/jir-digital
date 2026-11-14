@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: jashidulislamhridoy-cyber/jir-digital
+  branch: main
+  base_url: https://jir-decap-auth.jashidulislamhridoy.workers.dev
+  auth_endpoint: auth
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    file: "data/homepage.json"
+    fields:
+      - { label: "Hero subtitle", name: "hero_subtitle", widget: "text" }
+      - { label: "Email", name: "email", widget: "string" }
