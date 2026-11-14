@@ -4,15 +4,19 @@ backend:
   branch: main
   base_url: https://jir-decap-auth.jashidulislamhridoy.workers.dev
   auth_endpoint: auth
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: assets/uploads
+public_folder: /assets/uploads
 collections:
-  - name: "site"
-    label: "Site content"
+  - name: site
+    label: Site content
     files:
-      - name: "homepage"
-        label: "Homepage"
-        file: "data/homepage.json"
+      - name: homepage
+        label: Homepage
+        file: data/homepage.json
         fields:
-          - { label: "Hero subtitle", name: "hero_subtitle", widget: "text" }
-          - { label: "Email", name: "email", widget: "string" }
+          - label: Hero subtitle
+            name: hero_subtitle
+            widget: text
+          - label: Email
+            name: email
+            widget: string
