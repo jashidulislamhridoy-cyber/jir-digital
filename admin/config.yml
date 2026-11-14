@@ -1,4 +1,4 @@
-# Decap CMS config. Replace BACKEND_URL with your Cloudflare Worker URL after setup.
+# Decap CMS config. Replace https://jir-decap-auth.jashidulislamhridoy.workers.dev with your Cloudflare Worker URL after setup.
 backend:
   name: github
   repo: jashidulislamhridoy-cyber/jir-digital
