@@ -1237,6 +1237,7 @@
     document.querySelectorAll('[data-cms]').forEach(function(el){
       var k=el.getAttribute('data-cms'); if(d[k]!=null && d[k]!=='') el.textContent=d[k];
     });
+    if(d.logo){document.querySelectorAll('img[data-mark]').forEach(function(im){im.setAttribute('src',d.logo);});}
     var m=document.querySelector('[data-cms-mailto]');
     if(m && d.email) m.setAttribute('href','mailto:'+d.email);
   }).catch(function(){});
