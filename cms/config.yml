@@ -24,3 +24,13 @@ collections:
           - label: Email
             name: email
             widget: string
+          - label: Google Analytics 4 ID
+            name: ga4_id
+            widget: string
+            required: false
+            hint: "Example: G-XXXXXXXXXX. Leave empty to disable."
+          - label: Meta Pixel ID
+            name: meta_pixel_id
+            widget: string
+            required: false
+            hint: "Facebook Pixel numeric ID. Leave empty to disable."
