@@ -3,7 +3,7 @@ backend:
   name: github
   repo: jashidulislamhridoy-cyber/jir-digital
   branch: main
-  base_url: BACKEND_URL
+  base_url: https://jir-decap-auth.jashidulislamhridoy.workers.dev
   auth_endpoint: auth
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
