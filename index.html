@@ -1297,5 +1297,14 @@
   }).catch(function(){});
 })();
 </script>
+<script>
+(function(){
+  function reveal(){
+    document.querySelectorAll(".view.on .rv").forEach(function(el){ el.classList.add("in"); });
+  }
+  window.addEventListener("hashchange", function(){ setTimeout(reveal, 50); });
+  setTimeout(reveal, 50);
+})();
+</script>
 </body>
 </html>
