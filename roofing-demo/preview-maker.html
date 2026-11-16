@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Website Concept Preview Maker</title>
+<style>
+  :root { --accent: #f97316; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #f9fafb; }
+  button { font: inherit; cursor: pointer; }
+
+  /* ---------- Editor ---------- */
+  #editor { max-width: 980px; margin: 0 auto; padding: 24px 16px 60px; }
+  #editor h1 { font-size: 22px; margin: 0 0 4px; }
+  #editor .sub { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .field input[type=text], .field input[type=tel], .field textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; }
+  .field textarea { min-height: 70px; resize: vertical; }
+  .field.full { grid-column: 1 / -1; }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .thumb { margin-top: 8px; height: 60px; border: 1px dashed var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #fafafa; }
+  .thumb img { max-height: 100%; max-width: 100%; object-fit: contain; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .btn { border: 0; border-radius: 10px; padding: 11px 18px; font-weight: 600; background: var(--accent); color: #fff; }
+  .btn.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  #linkBox { width: 100%; margin-top: 12px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; font: 13px monospace; display: none; }
+  #status { font-size: 13px; color: var(--muted); margin-top: 10px; min-height: 18px; }
+  #previewWrap { margin-top: 26px; }
+  #previewWrap h2 { font-size: 16px; margin: 0 0 10px; }
+
+  /* ---------- Site preview ---------- */
+  .banner { background: #111827; color: #fff; font-size: 13px; text-align: center; padding: 8px 12px; }
+  .site { background: #fff; }
+  .site header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; }
+  .brand img { height: 36px; width: auto; }
+  .call { background: var(--accent); color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 10px; font-weight: 600; font-size: 14px; }
+  .hero { position: relative; min-height: 380px; display: flex; align-items: center; color: #fff; background-size: cover; background-position: center; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.25)); }
+  .hero .inner { position: relative; padding: 48px 24px; max-width: 760px; margin: 0 auto; width: 100%; }
+  .hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: 0 0 14px; }
+  .hero p { font-size: 17px; opacity: .92; margin: 0 0 22px; }
+  .hero .cta { display: inline-block; background: var(--accent); color: #fff; padding: 13px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+  .section { padding: 44px 24px; max-width: 980px; margin: 0 auto; }
+  .section h2 { font-size: 26px; margin: 0 0 18px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card strong { display: block; margin-bottom: 6px; color: var(--accent); }
+  .contact { background: #f3f4f6; text-align: center; }
+  .contact a { color: var(--accent); font-weight: 700; font-size: 20px; text-decoration: none; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px; }
+</style>
+</head>
+<body>
+
+<div id="editor">
+  <h1>Website concept preview maker</h1>
+  <p class="sub">Fill in the business details, then create a link to send. The link shows a sample website with their name, logo and photo. Every preview is labelled as a concept.</p>
+
+  <div class="grid">
+    <div class="field"><label for="name">Business name</label><input type="text" id="name" placeholder="Summit Peak Roofing"></div>
+    <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="(512) 555-0147"></div>
+    <div class="field"><label for="city">City, state</label><input type="text" id="city" placeholder="Austin, TX"></div>
+    <div class="field"><label for="color">Brand colour</label><input type="color" id="color" value="#f97316" style="width:100%;height:42px;border:1px solid var(--line);border-radius:10px;padding:4px"></div>
+    <div class="field full"><label for="tagline">Headline (optional)</label><input type="text" id="tagline" placeholder="Trusted roofing for every home in Austin"></div>
+    <div class="field full"><label for="services">Services (one per line)</label><textarea id="services" placeholder="Roof replacement&#10;Repairs&#10;Storm damage&#10;Gutters"></textarea></div>
+    <div class="field">
+      <label for="logo">Logo (PNG or JPG)</label>
+      <input type="file" id="logo" accept="image/*">
+      <div class="hint">Optional. Resized to fit automatically.</div>
+      <div class="thumb" id="logoThumb"><span class="hint">No logo</span></div>
+    </div>
+    <div class="field">
+      <label for="photo">Hero photo (JPG)</label>
+      <input type="file" id="photo" accept="image/*">
+      <div class="hint">Optional. A wide roof or house photo works best.</div>
+      <div class="thumb" id="photoThumb"><span class="hint">No photo</span></div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn ghost" id="previewBtn" type="button">Update preview</button>
+    <button class="btn" id="linkBtn" type="button">Create client link</button>
+  </div>
+  <input type="text" id="linkBox" readonly onclick="this.select()">
+  <div id="status"></div>
+
+  <div id="previewWrap">
+    <h2>Preview</h2>
+    <div id="previewHost" style="border:1px solid var(--line);border-radius:14px;overflow:hidden"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var MAX_LINK = 1800000; // characters; keeps the link within common browser limits
+
+  // ---------- Helpers ----------
+  function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+  function b64decode(str) { return decodeURIComponent(escape(atob(str))); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function digits(p) { return (p || '').replace(/[^0-9+]/g, ''); }
+  function clean(v, max) { return String(v || '').trim().slice(0, max || 200); }
+
+  // Resize an image file to a data URL. Keeps PNG for logos (transparency), JPEG for photos.
+  function resizeImage(file, maxSide, mime, quality) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onerror = reject;
+      reader.onload = function () {
+        var img = new Image();
+        img.onerror = reject;
+        img.onload = function () {
+          var s = Math.min(1, maxSide / Math.max(img.width, img.height));
+          var c = document.createElement('canvas');
+          c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+          var ctx = c.getContext('2d');
+          if (mime === 'image/jpeg') { ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, c.width, c.height); }
+          ctx.drawImage(img, 0, 0, c.width, c.height);
+          resolve(c.toDataURL(mime, quality));
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // ---------- Data ----------
+  var state = { logo: '', photo: '' };
+
+  function readForm() {
+    return {
+      name: clean($('name').value, 80) || 'Your Business',
+      phone: clean($('phone').value, 30),
+      city: clean($('city').value, 80),
+      color: $('color').value || '#f97316',
+      tagline: clean($('tagline').value, 140),
+      services: $('services').value.split('\n').map(function (s) { return clean(s, 60); }).filter(Boolean).slice(0, 8),
+      logo: state.logo,
+      photo: state.photo
+    };
+  }
+  function $(id) { return document.getElementById(id); }
+
+  // ---------- Site rendering (also used for the client view) ----------
+  function renderSite(d, host, isClient) {
+    host.innerHTML = '';
+    var wrap = el('div', 'site');
+    if (isClient) wrap.appendChild(el('div', 'banner', 'Concept preview for ' + d.name + '. This is a sample design, not their current website.'));
+
+    var accent = d.color;
+    wrap.style.setProperty('--accent', accent);
+
+    // Header
+    var header = el('header');
+    var brand = el('div', 'brand');
+    if (d.logo) { var li = el('img'); li.src = d.logo; li.alt = d.name + ' logo'; brand.appendChild(li); }
+    brand.appendChild(el('span', '', d.name));
+    header.appendChild(brand);
+    if (d.phone) { var call = el('a', 'call', 'Call ' + d.phone); call.href = 'tel:' + digits(d.phone); header.appendChild(call); }
+    wrap.appendChild(header);
+
+    // Hero
+    var hero = el('div', 'hero');
+    var bg = d.photo ? 'url("' + d.photo + '")' : 'linear-gradient(135deg, #1f2937, ' + accent + ')';
+    hero.style.backgroundImage = bg;
+    var inner = el('div', 'inner');
+    inner.appendChild(el('h1', '', d.tagline || 'Quality roofing you can trust'));
+    inner.appendChild(el('p', '', (d.city ? 'Serving ' + d.city + '. ' : '') + 'Free estimates and honest advice.'));
+    var cta = el('a', 'cta', 'Get a free estimate'); cta.href = '#contact';
+    inner.appendChild(cta);
+    hero.appendChild(inner);
+    wrap.appendChild(hero);
+
+    // Services
+    if (d.services.length) {
+      var sec = el('div', 'section');
+      sec.appendChild(el('h2', '', 'Our services'));
+      var cards = el('div', 'cards');
+      d.services.forEach(function (s) {
+        var c = el('div', 'card');
+        c.appendChild(el('strong', '', s));
+        c.appendChild(el('span', '', 'Sample description. Replace with the business’s own wording.'));
+        cards.appendChild(c);
+      });
+      sec.appendChild(cards);
+      wrap.appendChild(sec);
+    }
+
+    // Contact
+    var contact = el('div', 'section contact'); contact.id = 'contact';
+    contact.appendChild(el('h2', '', 'Get in touch'));
+    if (d.phone) { var a = el('a', '', d.phone); a.href = 'tel:' + digits(d.phone); contact.appendChild(a); }
+    wrap.appendChild(contact);
+
+    wrap.appendChild(el('footer', '', '© ' + d.name + (d.city ? ' · ' + d.city : '') + ' · Concept preview'));
+    host.appendChild(wrap);
+  }
+
+  function updatePreview() {
+    renderSite(readForm(), $('previewHost'), false);
+  }
+
+  // ---------- Events ----------
+  $('previewBtn').addEventListener('click', updatePreview);
+  ['name', 'phone', 'city', 'color', 'tagline', 'services'].forEach(function (id) {
+    $(id).addEventListener('input', updatePreview);
+  });
+
+  $('logo').addEventListener('change', function () {
+    var f = this.files[0]; if (!f) return;
+    resizeImage(f, 400, 'image/png', 1).then(function (url) {
+      state.logo = url;
+      $('logoThumb').innerHTML = ''; var im = el('img'); im.src = url; $('logoThumb').appendChild(im);
+      updatePreview();
+    });
+  });
+  $('photo').addEventListener('change', function () {
+    var f = this.files[0]; if (!f) return;
+    resizeImage(f, 1000, 'image/jpeg', 0.7).then(function (url) {
+      state.photo = url;
+      $('photoThumb').innerHTML = ''; var im = el('img'); im.src = url; $('photoThumb').appendChild(im);
+      updatePreview();
+    });
+  });
+
+  $('linkBtn').addEventListener('click', function () {
+    var d = readForm();
+    if (!d.phone) { $('status').textContent = 'Add a phone number first.'; return; }
+    var payload = b64encode(JSON.stringify(d));
+    var base = location.href.split('#')[0];
+    var link = base + '#d=' + payload;
+    if (link.length > MAX_LINK) {
+      $('status').textContent = 'Images are too large for a link. Use a smaller logo or photo, then try again.';
+      return;
+    }
+    var box = $('linkBox'); box.style.display = 'block'; box.value = link;
+    var msg = 'Link ready (' + Math.round(link.length / 1024) + ' KB). ';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(link).then(function () { $('status').textContent = msg + 'Copied to clipboard.'; },
+        function () { $('status').textContent = msg + 'Copy it from the box.'; });
+    } else { $('status').textContent = msg + 'Copy it from the box.'; }
+  });
+
+  // ---------- Mode: client view if a link was opened ----------
+  var hash = location.hash || '';
+  if (hash.indexOf('#d=') === 0) {
+    try {
+      var data = JSON.parse(b64decode(hash.slice(3)));
+      var d = {
+        name: clean(data.name, 80) || 'Your Business',
+        phone: clean(data.phone, 30),
+        city: clean(data.city, 80),
+        color: /^#[0-9a-fA-F]{6}$/.test(data.color) ? data.color : '#f97316',
+        tagline: clean(data.tagline, 140),
+        services: (data.services || []).map(function (s) { return clean(s, 60); }).filter(Boolean).slice(0, 8),
+        logo: /^data:image\/(png|jpeg|webp);base64,/.test(data.logo || '') ? data.logo : '',
+        photo: /^data:image\/(jpeg|png|webp);base64,/.test(data.photo || '') ? data.photo : ''
+      };
+      document.getElementById('editor').style.display = 'none';
+      var host = document.createElement('div');
+      document.body.appendChild(host);
+      renderSite(d, host, true);
+      document.title = d.name + ': concept preview';
+    } catch (e) {
+      document.getElementById('editor').insertAdjacentHTML('afterbegin', '<p class="sub">This link could not be read. Ask for a new one.</p>');
+    }
+  } else {
+    updatePreview();
+  }
+})();
+</script>
+</body>
+</html>

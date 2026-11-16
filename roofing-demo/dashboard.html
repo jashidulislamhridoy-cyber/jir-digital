@@ -34,7 +34,11 @@
 
   <!-- App -->
   <section id="app" class="cx hidden py-10">
-    <div class="flex flex-wrap items-center justify-between gap-4">
+    <nav class="flex gap-2 border-b border-line pb-3" aria-label="Dashboard sections">
+      <button type="button" data-tab="leads" class="tab-btn rounded-xl bg-charcoal px-4 py-2 text-sm font-semibold text-white">Leads</button>
+      <button type="button" data-tab="maker" class="tab-btn rounded-xl bg-white px-4 py-2 text-sm font-semibold ring-1 ring-line">Preview maker</button>
+    </nav>
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
       <div><h1 class="text-3xl font-extrabold">Leads</h1><p class="mt-2"><span id="mode"></span></p></div>
       <div class="flex flex-wrap gap-2">
         <button id="refresh" type="button" class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold ring-1 ring-line hover:ring-slate/40">Refresh</button>
@@ -78,11 +82,37 @@
 </main>
 
 <!-- Lead detail -->
+  <!-- Preview maker (shown when its tab is selected) -->
+  <section id="maker" class="cx hidden py-10">
+    <nav class="flex gap-2 border-b border-line pb-3" aria-label="Dashboard sections">
+      <button type="button" data-tab="leads" class="tab-btn rounded-xl bg-white px-4 py-2 text-sm font-semibold ring-1 ring-line">Leads</button>
+      <button type="button" data-tab="maker" class="tab-btn rounded-xl bg-charcoal px-4 py-2 text-sm font-semibold text-white">Preview maker</button>
+    </nav>
+    <h1 class="mt-8 text-3xl font-extrabold">Preview maker</h1>
+    <p class="mt-2 text-sm text-slate">Build a concept website for a prospect, then copy the client link. Nothing is saved on the server.</p>
+    <iframe src="preview-maker.html" title="Preview maker" class="mt-6 h-[1400px] w-full rounded-2xl border border-line bg-white"></iframe>
+  </section>
+
 <div id="drawer" class="fixed inset-0 z-50 hidden bg-charcoal/50">
   <div class="absolute inset-y-0 right-0 w-full max-w-md overflow-y-auto bg-white p-8 shadow-2xl" role="dialog" aria-label="Lead details">
     <button id="drawerClose" type="button" class="float-right grid size-9 place-items-center rounded-full ring-1 ring-line hover:bg-offwhite" aria-label="Close">&times;</button>
     <div id="drawerBody"></div>
   </div>
 </div>
+<script>
+  // Switch between the Leads view and the Preview maker. Only shown after sign-in.
+  (function () {
+    var app = document.getElementById('app');
+    var maker = document.getElementById('maker');
+    document.querySelectorAll('[data-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var showMaker = btn.getAttribute('data-tab') === 'maker';
+        app.classList.toggle('hidden', showMaker);
+        maker.classList.toggle('hidden', !showMaker);
+        window.scrollTo(0, 0);
+      });
+    });
+  })();
+</script>
 </body>
 </html>

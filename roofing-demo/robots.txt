@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /dashboard.html
+Disallow: /preview-maker.html
 
 Sitemap: https://jashidulislamhridoy-cyber.github.io/jir-digital/roofing-demo/sitemap.xml
