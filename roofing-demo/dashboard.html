@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lead Dashboard | Apex Crest Roofing</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<script src="assets/config.js"></script>
+<script src="assets/dashboard.js" defer></script>
+</head>
+<body class="!pb-0">
+<header class="bg-charcoal">
+  <div class="cx flex h-16 items-center justify-between gap-4">
+    <p class="font-heading text-[17px] font-extrabold text-white">Apex Crest Roofing <span class="ml-2 hidden text-sm font-medium text-white/50 sm:inline">Lead Dashboard</span></p>
+    <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white">View website →</a>
+  </div>
+</header>
+
+<main>
+  <!-- Login -->
+  <section id="login" class="cx grid min-h-[70vh] place-items-center py-16">
+    <form id="loginForm" class="card w-full max-w-md p-8">
+      <h1 class="text-2xl font-extrabold">Sign in</h1>
+      <p id="loginHint" class="mt-2 text-sm text-slate">Enter your dashboard password.</p>
+      <label for="pass" class="mt-6 block text-sm font-semibold text-charcoal">Password</label>
+      <input id="pass" type="password" autocomplete="current-password" class="mt-2 block w-full rounded-xl border border-line px-4 py-3.5 text-[16px] outline-none focus:border-accent focus:ring-4 focus:ring-accent/15" />
+      <p id="loginErr" class="mt-3 hidden text-sm font-medium text-red-600" role="alert"></p>
+      <button class="btn btn-p mt-6 w-full" type="submit">Sign in</button>
+    </form>
+  </section>
+
+  <!-- App -->
+  <section id="app" class="cx hidden py-10">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div><h1 class="text-3xl font-extrabold">Leads</h1><p class="mt-2"><span id="mode"></span></p></div>
+      <div class="flex flex-wrap gap-2">
+        <button id="refresh" type="button" class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold ring-1 ring-line hover:ring-slate/40">Refresh</button>
+        <button id="export" type="button" class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold ring-1 ring-line hover:ring-slate/40">Download CSV</button>
+        <button id="logout" type="button" class="rounded-xl px-4 py-2.5 text-sm font-semibold text-slate hover:text-charcoal">Sign out</button>
+      </div>
+    </div>
+
+    <div id="kpi" class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+
+    <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+      <div class="card min-w-0 p-6 lg:col-span-2">
+        <h2 class="text-lg font-bold">Leads per month</h2>
+        <div id="chart" class="mt-6 flex items-end gap-3"></div>
+        <div class="mt-6 overflow-x-auto"><table class="w-full min-w-[480px] text-left text-sm">
+          <thead class="text-xs uppercase tracking-wider text-slate"><tr><th class="pb-2 pr-4 font-semibold">Month</th><th class="pb-2 pr-4 font-semibold">Estimates</th><th class="pb-2 pr-4 font-semibold">Contact</th><th class="pb-2 pr-4 font-semibold">Quick msg</th><th class="pb-2 pr-4 font-semibold">Call taps</th><th class="pb-2 pr-4 font-semibold">Won</th></tr></thead>
+          <tbody id="monthly"></tbody>
+        </table></div>
+      </div>
+      <div class="card p-6">
+        <h2 class="text-lg font-bold">Where leads come from</h2>
+        <ul id="sources" class="mt-6 space-y-4"></ul>
+      </div>
+    </div>
+
+    <div class="card mt-6 min-w-0 p-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="text-lg font-bold">All leads <span id="count" class="ml-2 text-sm font-medium text-slate"></span></h2>
+        <div class="flex flex-wrap gap-2">
+          <input id="f-q" type="search" placeholder="Search name, phone, service…" aria-label="Search leads" class="rounded-xl border border-line px-3 py-2 text-sm outline-none focus:border-accent" />
+          <select id="f-status" aria-label="Filter by status" class="rounded-xl border border-line px-3 py-2 text-sm"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Estimate Sent</option><option>Won</option><option>Lost</option></select>
+          <select id="f-type" aria-label="Filter by type" class="rounded-xl border border-line px-3 py-2 text-sm"><option value="">All types</option><option value="estimate">Estimate request</option><option value="contact">Contact form</option><option value="quick-message">Quick message</option></select>
+        </div>
+      </div>
+      <div class="mt-4 overflow-x-auto"><table class="w-full min-w-[720px] text-left text-sm">
+        <thead class="text-xs uppercase tracking-wider text-slate"><tr><th class="pb-2 pr-4 font-semibold">Date</th><th class="pb-2 pr-4 font-semibold">Name</th><th class="pb-2 pr-4 font-semibold">Phone</th><th class="pb-2 pr-4 font-semibold">Service</th><th class="pb-2 pr-4 font-semibold">Source</th><th class="pb-2 font-semibold">Status</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+    </div>
+  </section>
+</main>
+
+<!-- Lead detail -->
+<div id="drawer" class="fixed inset-0 z-50 hidden bg-charcoal/50">
+  <div class="absolute inset-y-0 right-0 w-full max-w-md overflow-y-auto bg-white p-8 shadow-2xl" role="dialog" aria-label="Lead details">
+    <button id="drawerClose" type="button" class="float-right grid size-9 place-items-center rounded-full ring-1 ring-line hover:bg-offwhite" aria-label="Close">&times;</button>
+    <div id="drawerBody"></div>
+  </div>
+</div>
+</body>
+</html>
