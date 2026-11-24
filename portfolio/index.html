@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JIR DIGITAL MARKETING AGENCY | Construction &amp; Roofing Growth Partner</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#050507',
+              900: '#09090B',
+              800: '#121318',
+              700: '#1A1C24',
+            },
+            gold: {
+              600: '#9A6B16',
+              500: '#B58422',
+              400: '#D4AF37',
+              300: '#F3E5AB',
+              200: '#F9E8B2',
+              100: '#FDF5D7',
+            },
+            lime: {
+              400: '#22C55E',
+              500: '#16A34A',
+            },
+            ivory: '#FAF9F6',
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+      background-color: #09090B;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Champagne Metallic Gold Gradients & Shimmer */
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #9A6B16 0%, #D4AF37 45%, #F3E5AB 80%, #FDF5D7 100%);
+    }
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #FDF5D7 85%, #9A6B16 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-hairline {
+      border: 1px solid rgba(212, 175, 55, 0.34);
+    }
+
+    /* Single-Line Animated Glass-Pill Navigation */
+    .nav-pill-btn {
+      position: relative;
+      white-space: nowrap;
+      transition: color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
+    }
+    .nav-pill-btn::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 3px;
+      width: 0%;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #9A6B16, #D4AF37, #F3E5AB);
+      transform: translateX(-50%);
+      transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-pill-btn:hover::after {
+      width: 65%;
+    }
+    .nav-pill-btn.active-nav {
+      background: linear-gradient(135deg, #9A6B16 0%, #D4AF37 48%, #F3E5AB 85%, #FDF5D7 100%);
+      color: #050507 !important;
+      box-shadow: 0 8px 22px -6px rgba(212, 175, 55, 0.55);
+    }
+    .nav-pill-btn.active-nav::after {
+      width: 0%;
+    }
+
+    /* Dedicated Tab Transition Animation */
+    @keyframes tabEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(16px) scale(0.994);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .tab-view-animate {
+      animation: tabEnter 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Shimmer Sweep Animation on Gold CTAs */
+    .btn-gold-shimmer {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #9A6B16 0%, #D4AF37 45%, #F3E5AB 80%, #FDF5D7 100%);
+      color: #050507;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+    .btn-gold-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+      transform: rotate(25deg);
+      animation: shimmerSweep 3.4s infinite;
+    }
+    .btn-gold-shimmer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px -8px rgba(212, 175, 55, 0.55);
+    }
+    @keyframes shimmerSweep {
+      0% { left: -75%; }
+      45%, 100% { left: 145%; }
+    }
+
+    /* Infinite Luxury Gold Marquee */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 36s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Architectural Subtle Grid */
+    .luxury-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(212, 175, 55, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.07) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Interactive 3D Tilt + Radial Gold Spotlight Card */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(460px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(243, 229, 171, 0.16), transparent 65%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+    .spotlight-card:hover {
+      border-color: rgba(243, 229, 171, 0.65);
+      box-shadow: 0 26px 50px -14px rgba(0, 0, 0, 0.85), 0 0 28px -8px rgba(212, 175, 55, 0.28);
+    }
+
+    /* Bar Micro-Animations */
+    @keyframes barGrow {
+      0%, 100% { transform: scaleY(0.65); }
+      50% { transform: scaleY(1); }
+    }
+    .bento-bar {
+      transform-origin: bottom;
+      animation: barGrow 2.6s ease-in-out infinite;
+    }
+
+    /* Animated Social Media Footer Buttons */
+    .social-footer-btn {
+      position: relative;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, color 0.28s ease;
+    }
+    .social-footer-btn:hover {
+      transform: translateY(-4px) scale(1.06);
+      border-color: #D4AF37;
+      background-color: #1A1C24;
+      color: #F3E5AB;
+      box-shadow: 0 12px 26px -6px rgba(212, 175, 55, 0.48), 0 0 14px rgba(212, 175, 55, 0.28);
+    }
+
+    /* Luxury Gold Range Sliders */
+    input[type="range"] {
+      -webkit-appearance: none;
+      background: rgba(212, 175, 55, 0.28);
+      height: 7px;
+      border-radius: 999px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 55%, #9A6B16 100%);
+      border: 2px solid #050507;
+      box-shadow: 0 0 16px rgba(243, 229, 171, 0.85);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-400 selection:text-obsidian-950">
+  <!-- ==================== 1. TOP UTILITY BAR ==================== -->
+  <div class="relative z-30 bg-obsidian-950 text-white text-xs border-b border-gold-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4 sm:gap-6">
+        <span class="flex items-center gap-2 text-neutral-300 font-medium">
+          <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+          <span>1 Contractor Per City &amp; Trade · Serving US, Canada, UK &amp; Australia</span>
+        </span>
+        <button type="button" onclick="openAuditSection()" class="hidden sm:inline-flex items-center gap-1.5 text-gold-300 hover:text-gold-200 font-semibold transition">
+          <span>✦ Free 1-on-1 Website, Pixel &amp; Growth Audit</span>
+        </button>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3.5 ml-auto">
+        <a href="mailto:mh3035921@gmail.com" class="hidden sm:inline-flex items-center text-neutral-300 hover:text-gold-300 transition font-medium">
+          mh3035921@gmail.com
+        </a>
+        <span class="hidden sm:inline text-gold-400/30">|</span>
+        <a href="https://wa.me/8801744353574?text=Hi%20Hridoy%2C%20I%20run%20a%20roofing%2Fconstruction%20company%20and%20would%20like%20a%20Free%20Website%2C%20Pixel%20%26%20Growth%20Audit." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-obsidian-800 hover:bg-obsidian-700 border border-gold-400/45 text-gold-200 font-heading font-bold px-3 py-1 rounded-full transition text-[11px] whitespace-nowrap">
+          <span class="w-1.5 h-1.5 rounded-full bg-lime-400 animate-ping"></span>
+          <span>WhatsApp: +880 1744-353574</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. STICKY SINGLE-LINE GLASS-PILL HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-obsidian-900/95 backdrop-blur-xl border-b border-gold-400/25 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-2">
+        <!-- Brand Logo with Custom JIR Digital Green Rising-Chart Emblem -->
+        <button type="button" onclick="openNavTab('home')" class="flex items-center gap-2.5 text-left group focus:outline-none shrink-0">
+          <div class="relative w-11 h-11 rounded-xl bg-[#0E1B33] overflow-hidden border border-gold-400/75 shadow-[0_0_24px_rgba(212,175,55,0.28)] group-hover:border-gold-300 group-hover:scale-105 transition duration-300 flex items-center justify-center p-1.5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JIR Digital Emblem">
+              <circle cx="50" cy="50" r="44" fill="#0E1B33"/>
+              <path d="M12 63A42 42 0 1 1 89 35L62 42L66 47L44 65L29 51L12 63Z" fill="#22C55E"/>
+              <path d="M15 68L29 56L44 71L70 49L76 56L89 35A42 42 0 0 1 15 68Z" fill="#FFFFFF"/>
+              <rect x="27" y="42" width="8" height="14" fill="#0E1B33"/>
+              <rect x="40" y="33" width="8" height="28" fill="#0E1B33"/>
+              <rect x="53" y="22" width="8" height="31" fill="#0E1B33"/>
+              <path d="M10 69L29 53L44 68L68 47L75 55L89 35L63 41L69 47L44 62L29 48L10 69Z" fill="#0E1B33"/>
+            </svg>
+          </div>
+          <div class="whitespace-nowrap">
+            <span class="block font-heading font-extrabold text-base sm:text-lg tracking-wider text-white leading-none">JIR <span class="gold-text-gradient">DIGITAL</span></span>
+            <span class="block font-heading font-bold text-[8px] tracking-[0.2em] text-lime-400 uppercase mt-1">MARKETING AGENCY</span>
+          </div>
+        </button>
+
+        <!-- Single-Line Horizontal Navigation Tabs (Visible on md:flex and larger) -->
+        <nav class="hidden md:flex items-center gap-0.5 bg-obsidian-950/90 border border-gold-400/25 rounded-full p-1 shadow-inner overflow-x-auto max-w-full" aria-label="Primary Navigation">
+          <button type="button" id="navBtn-home" onclick="openNavTab('home')" class="nav-pill-btn active-nav px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-extrabold uppercase tracking-wider text-white">HOME</button>
+          <button type="button" id="navBtn-solutions" onclick="openNavTab('solutions')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">SOLUTIONS</button>
+          <button type="button" id="navBtn-tracking-stack" onclick="openNavTab('tracking-stack')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">TRACKING STACK</button>
+          <button type="button" id="navBtn-organic-social" onclick="openNavTab('organic-social')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">5-PLATFORM ORGANIC</button>
+          <button type="button" id="navBtn-benchmarks" onclick="openNavTab('benchmarks')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">BENCHMARKS</button>
+          <button type="button" id="navBtn-calculator" onclick="openNavTab('calculator')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">ROI CALCULATOR</button>
+          <button type="button" id="navBtn-packages" onclick="openNavTab('packages')" class="nav-pill-btn px-2.5 lg:px-3.5 py-1.5 rounded-full text-[10px] lg:text-[11px] font-heading font-bold uppercase tracking-wider text-neutral-200 hover:text-gold-300">PARTNERSHIPS</button>
+        </nav>
+
+        <!-- Primary Metallic Gold CTA + Mobile Menu Trigger -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button type="button" onclick="openAuditSection()" class="inline-flex items-center gap-1.5 btn-gold-shimmer font-heading font-extrabold text-[10px] lg:text-[11px] uppercase tracking-wider px-4 lg:px-5 py-2.5 lg:py-3 rounded-xl shadow-lg whitespace-nowrap">
+            <span>GET FREE AUDIT</span>
+          </button>
+          <button type="button" onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl border border-gold-400/35 text-gold-300 hover:bg-obsidian-800" aria-label="Open Navigation Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="hidden md:hidden bg-obsidian-950 text-white border-t border-gold-400/20 px-4 pt-3 pb-6 space-y-1.5">
+      <button type="button" onclick="openNavTab('home'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold text-gold-300 hover:bg-white/5">Home (Full All-in-One Scroll)</button>
+      <button type="button" onclick="openNavTab('solutions'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">Solutions (Core Growth System)</button>
+      <button type="button" onclick="openNavTab('tracking-stack'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">Tracking Stack (GA4, GTM, CAPI, CallRail)</button>
+      <button type="button" onclick="openNavTab('organic-social'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">5-Platform Organic Social Authority</button>
+      <button type="button" onclick="openNavTab('benchmarks'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">Live US Contractor Benchmarks</button>
+      <button type="button" onclick="openNavTab('calculator'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">ROI Calculator &amp; Territory Check</button>
+      <button type="button" onclick="openNavTab('packages'); toggleMobileMenu();" class="block w-full text-left px-3.5 py-2.5 rounded-xl font-heading font-bold hover:bg-white/5">Custom Partnerships &amp; Free Audit</button>
+      <div class="pt-3">
+        <button type="button" onclick="openAuditSection(); toggleMobileMenu();" class="block w-full btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl text-center">GET FREE AUDIT</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== DEDICATED TAB BREADCRUMB BAR ==================== -->
+  <div id="tabBreadcrumbBar" class="hidden relative z-30 bg-obsidian-950 border-b border-gold-400/35">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 text-xs">
+        <button type="button" onclick="openNavTab('home')" class="inline-flex items-center gap-1.5 bg-obsidian-800 hover:bg-obsidian-700 border border-gold-400/40 text-gold-300 font-heading font-bold px-3.5 py-1.5 rounded-lg transition whitespace-nowrap">
+          <span>← Back to Home</span>
+        </button>
+        <span class="text-neutral-500">/</span>
+        <span id="activeTabLabel" class="font-heading font-extrabold uppercase tracking-wider text-white">Dedicated View</span>
+      </div>
+      <button type="button" onclick="openNavTab('home')" class="inline-flex items-center gap-1.5 btn-gold-shimmer font-heading font-extrabold text-[11px] uppercase tracking-wider px-4 py-1.5 rounded-lg whitespace-nowrap">
+        <span>✦ View Full All-in-One Scroll Page</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== 3. HERO SECTION & EXECUTIVE FOUNDER SHOWCASE ==================== -->
+  <section id="section-home" class="page-section relative bg-obsidian-900 text-white luxury-grid-bg overflow-hidden">
+    <!-- Full-Bleed 60fps 3D Champagne-Gold Spatial Wave & Crystalline Prism Canvas -->
+    <canvas id="hero3dCanvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+
+    <!-- Volumetric Warm Gold & Subtle Lime Ambient Light Halos -->
+    <div class="absolute -top-28 -left-24 w-[32rem] h-[32rem] rounded-full bg-gold-400/20 blur-[130px] pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-24 w-[34rem] h-[34rem] rounded-full bg-gold-300/15 blur-[135px] pointer-events-none"></div>
+    <div class="absolute -bottom-24 left-1/3 w-[28rem] h-[28rem] rounded-full bg-lime-400/12 blur-[120px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 lg:pt-16 lg:pb-24">
+      <!-- Interactive Multi-Trade Construction Switcher Pills -->
+      <div class="mb-7">
+        <span class="block text-[10px] font-heading font-extrabold uppercase tracking-[0.22em] text-gold-300/90 mb-2.5">Select Your Construction Specialty To Preview Custom Telemetry:</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" id="tradeBtn0" onclick="selectTrade(0)" class="px-4 py-2 rounded-full font-heading font-extrabold text-xs uppercase tracking-wider gold-gradient-bg text-obsidian-950 shadow-lg transition whitespace-nowrap">
+            + ROOFING CONTRACTORS (PRIMARY)
+          </button>
+          <button type="button" id="tradeBtn1" onclick="selectTrade(1)" class="px-4 py-2 rounded-full font-heading font-bold text-xs uppercase tracking-wider bg-obsidian-800/90 hover:bg-obsidian-700 text-neutral-200 border border-gold-400/35 transition whitespace-nowrap">
+            WINDOWS &amp; DOORS
+          </button>
+          <button type="button" id="tradeBtn2" onclick="selectTrade(2)" class="px-4 py-2 rounded-full font-heading font-bold text-xs uppercase tracking-wider bg-obsidian-800/90 hover:bg-obsidian-700 text-neutral-200 border border-gold-400/35 transition whitespace-nowrap">
+            SIDING &amp; GUTTERS
+          </button>
+          <button type="button" id="tradeBtn3" onclick="selectTrade(3)" class="px-4 py-2 rounded-full font-heading font-bold text-xs uppercase tracking-wider bg-obsidian-800/90 hover:bg-obsidian-700 text-neutral-200 border border-gold-400/35 transition whitespace-nowrap">
+            SOLAR &amp; EXTERIOR REMODELING
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2.5 bg-obsidian-800/95 border border-gold-400/50 rounded-full px-4 py-1.5 mb-5 shadow-[0_0_28px_rgba(212,175,55,0.2)]">
+            <span class="w-2 h-2 rounded-full bg-lime-400 animate-ping"></span>
+            <span id="heroTradeBadge" class="text-[11px] sm:text-xs font-heading font-bold tracking-[0.15em] uppercase text-gold-200">BUILT EXCLUSIVELY FOR ROOFING CONTRACTORS</span>
+          </div>
+
+          <h1 id="heroHeadline" class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.35rem] tracking-tight leading-[1.08] mb-6">
+            We Turn Local Roofers Into The <span class="font-serif italic font-bold gold-text-gradient">#1 Dominant Brand</span> In Their City.
+          </h1>
+
+          <p id="heroSubcopy" class="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
+            One all-in-one growth partner for <strong class="text-white">2-second high-converting contractor websites</strong>, full <strong class="text-white">GA4, GTM, Meta Pixel &amp; CAPI attribution</strong>, <strong class="text-white">exclusive paid lead campaigns</strong>, and <strong class="text-white">daily organic growth across Facebook, Instagram, LinkedIn, YouTube &amp; TikTok</strong>.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <button type="button" onclick="openAuditSection()" class="inline-flex items-center justify-center gap-2.5 btn-gold-shimmer font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-xl">
+              <span>GET FREE AUDIT →</span>
+            </button>
+            <button type="button" onclick="openNavTab('calculator')" class="inline-flex items-center justify-center gap-2 bg-obsidian-800/85 hover:bg-obsidian-700 backdrop-blur-md border border-gold-400/50 text-gold-200 font-heading font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-xl transition">
+              <span>CHECK TERRITORY &amp; ROI</span>
+            </button>
+          </div>
+
+          <!-- 4 Live KPI Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-7 border-t border-gold-400/25">
+            <div>
+              <span class="kpi-counter block font-heading font-extrabold text-2xl sm:text-3xl gold-text-gradient" data-target="6" data-suffix="+ Yrs">6+ Yrs</span>
+              <span class="text-xs text-neutral-400 font-medium">Hands-On Experience</span>
+            </div>
+            <div>
+              <span class="kpi-counter block font-heading font-extrabold text-2xl sm:text-3xl text-white" data-target="700" data-suffix="+">700+</span>
+              <span class="text-xs text-neutral-400 font-medium">Channels Scaled</span>
+            </div>
+            <div>
+              <span class="kpi-counter block font-heading font-extrabold text-2xl sm:text-3xl text-white" data-target="100" data-suffix="+">100+</span>
+              <span class="text-xs text-neutral-400 font-medium">Businesses Grown</span>
+            </div>
+            <div>
+              <span id="heroRoiMetric" class="block font-heading font-extrabold text-2xl sm:text-3xl text-lime-400">4.8x</span>
+              <span class="text-xs text-neutral-400 font-medium">Avg. Contractor ROI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Executive Founder Showcase & About Me Card -->
+        <div class="lg:col-span-5">
+          <div class="spotlight-card bg-obsidian-800/95 backdrop-blur-xl gold-border-hairline rounded-3xl p-6 sm:p-7 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.92)]">
+            <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-stretch">
+              <!-- Clickable Gold-Bordered Portrait Frame with Fallback Chain -->
+              <div onclick="triggerFounderPhotoPicker()" title="Click to upload and preview your portrait photo" class="group/photo cursor-pointer relative w-44 sm:w-44 shrink-0 rounded-2xl overflow-hidden bg-obsidian-950 border-2 border-gold-400 shadow-[0_0_28px_rgba(212,175,55,0.35)] aspect-[3/4] sm:aspect-auto">
+                <img
+                  src="founder.png"
+                  alt="Jasidul Islam Hridoy - Founder of JIR Digital Marketing Agency"
+                  class="founder-portrait-img w-full h-full object-cover object-top transition duration-300 group-hover/photo:scale-105"
+                  onerror="handleFounderImgError(this)"
+                />
+                <!-- Styled JIH FOUNDER Monogram Card Fallback -->
+                <div class="founder-monogram-fallback hidden w-full h-full min-h-[215px] flex flex-col items-center justify-center bg-gradient-to-br from-obsidian-900 via-obsidian-950 to-obsidian-900 p-4 text-center">
+                  <span class="font-heading font-extrabold text-3xl gold-text-gradient tracking-wider">JIH</span>
+                  <span class="text-[10px] font-heading font-bold uppercase tracking-[0.22em] text-gold-300 mt-1.5">FOUNDER</span>
+                  <span class="mt-3 text-[9px] font-heading font-semibold uppercase tracking-widest text-neutral-400 border-t border-gold-400/25 pt-2">JIR Digital</span>
+                </div>
+                <!-- Subtle Hover Upload Badge -->
+                <div class="absolute top-2.5 right-2.5 bg-obsidian-950/85 backdrop-blur-md border border-gold-400/60 text-gold-300 rounded-lg px-2 py-1 text-[9px] font-heading font-extrabold uppercase tracking-wider opacity-0 group-hover/photo:opacity-100 transition flex items-center gap-1 shadow-lg">
+                  <span>📷</span>
+                  <span>Photo</span>
+                </div>
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/85 to-transparent px-3 py-2 text-center">
+                  <span class="font-heading font-extrabold text-[10px] uppercase tracking-widest text-gold-300">✦ Direct 1-on-1 Partner</span>
+                </div>
+              </div>
+
+              <!-- Direct 1-on-1 Founder Bio -->
+              <div class="flex-1 flex flex-col justify-between text-center sm:text-left">
+                <div>
+                  <div class="flex items-center justify-center sm:justify-between gap-2 mb-2.5">
+                    <span class="inline-flex items-center gap-1.5 bg-lime-500/15 border border-lime-400/45 text-lime-400 font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full">
+                      <span class="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse"></span> VERIFIED FOUNDER
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-[#0E1B33] overflow-hidden border border-gold-400/50 p-1 flex items-center justify-center shrink-0">
+                      <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JIR Digital Emblem">
+                        <circle cx="50" cy="50" r="44" fill="#0E1B33"/>
+                        <path d="M12 63A42 42 0 1 1 89 35L62 42L66 47L44 65L29 51L12 63Z" fill="#22C55E"/>
+                        <path d="M15 68L29 56L44 71L70 49L76 56L89 35A42 42 0 0 1 15 68Z" fill="#FFFFFF"/>
+                        <rect x="27" y="42" width="8" height="14" fill="#0E1B33"/>
+                        <rect x="40" y="33" width="8" height="28" fill="#0E1B33"/>
+                        <rect x="53" y="22" width="8" height="31" fill="#0E1B33"/>
+                        <path d="M10 69L29 53L44 68L68 47L75 55L89 35L63 41L69 47L44 62L29 48L10 69Z" fill="#0E1B33"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-white leading-tight">Jasidul Islam Hridoy</h2>
+                  <p class="text-xs font-heading font-bold text-gold-300 mt-0.5">Founder &amp; Lead Growth Architect</p>
+
+                  <p class="text-xs text-neutral-300 leading-relaxed mt-3">
+                    With <strong class="text-white">6+ years of hands-on experience</strong>, <strong class="text-white">700+ channels scaled</strong>, and <strong class="text-white">100+ businesses grown</strong>, I work with you <strong class="text-gold-200">directly 1-on-1</strong>—never passing your brand off to junior account managers.
+                  </p>
+                </div>
+
+                <!-- 3 Key Value Bullets -->
+                <div class="mt-4 pt-3 border-t border-gold-400/20 space-y-1.5 text-[11px] text-neutral-200 text-left">
+                  <div class="flex items-center gap-2">
+                    <span class="text-gold-300 font-bold">✦</span>
+                    <span>2-Second High-Converting Contractor Websites</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-lime-400 font-bold">✦</span>
+                    <span>Full GA4, GTM, Meta Pixel &amp; CAPI Attribution</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-gold-300 font-bold">✦</span>
+                    <span>Exclusive Paid Ads + 5-Platform Organic Authority</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Direct Founder Action Strip -->
+            <div class="mt-5 pt-4 border-t border-gold-400/20 flex flex-wrap items-center justify-between gap-2.5 text-xs">
+              <span class="text-neutral-400 font-medium">1 Contractor Per City &amp; Trade</span>
+              <button type="button" onclick="openAuditSection()" class="inline-flex items-center gap-1.5 text-gold-300 hover:text-gold-200 font-heading font-extrabold uppercase tracking-wider text-[11px] transition">
+                <span>Work Directly With Hridoy →</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INFINITE GOLD TRUST MARQUEE ==================== -->
+  <div id="section-marquee" class="page-section relative z-20 bg-obsidian-950 border-y border-gold-400/35 py-3.5 overflow-hidden">
+    <div class="marquee-track flex items-center gap-10 font-heading font-extrabold text-xs uppercase tracking-[0.20em] text-gold-300">
+      <span>1 CONTRACTOR PER CITY EXCLUSIVITY</span>
+      <span class="text-lime-400">✦</span>
+      <span>GA4 + GTM + META PIXEL + CAPI</span>
+      <span class="text-lime-400">✦</span>
+      <span>5-PLATFORM ORGANIC SOCIAL MANAGEMENT</span>
+      <span class="text-lime-400">✦</span>
+      <span>2-SECOND CONVERSION WEBSITES</span>
+      <span class="text-lime-400">✦</span>
+      <span>1 CONTRACTOR PER CITY EXCLUSIVITY</span>
+      <span class="text-lime-400">✦</span>
+      <span>GA4 + GTM + META PIXEL + CAPI</span>
+      <span class="text-lime-400">✦</span>
+      <span>5-PLATFORM ORGANIC SOCIAL MANAGEMENT</span>
+      <span class="text-lime-400">✦</span>
+      <span>2-SECOND CONVERSION WEBSITES</span>
+      <span class="text-lime-400">✦</span>
+    </div>
+  </div>
+
+  <!-- ==================== 4. SECTION 01: CORE GROWTH SOLUTIONS (4 CARDS) ==================== -->
+  <section id="section-solutions" class="page-section relative z-20 py-20 lg:py-24 bg-ivory text-obsidian-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-600 mb-2">Section 01 · Core Growth Solutions</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-obsidian-900">Complete Growth &amp; Tracking System For Contractors</h2>
+        <p class="text-neutral-600 mt-3 text-base">Whether you install roofs, windows, siding, or solar—every piece of your paid acquisition, server-side attribution, and daily organic brand presence works together seamlessly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Card 01: 2-Second Websites -->
+        <div class="md:col-span-7 spotlight-card bg-obsidian-900 text-white gold-border-hairline rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-heading font-extrabold text-2xl gold-text-gradient">01</span>
+              <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 border border-lime-400/30 px-3 py-1 rounded-full">● 1.6s Load Speed · 5.4% Conv.</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-white mb-2.5">2-Second Contractor Websites</h3>
+            <p class="text-sm text-neutral-300 leading-relaxed mb-6">Bespoke contractor websites engineered with sub-2-second mobile load speed, sticky click-to-call bars, financing calculators, and friction-free estimate funnels.</p>
+          </div>
+          <div class="bg-obsidian-950/95 rounded-2xl p-4 border border-gold-400/25 flex items-end justify-between gap-4">
+            <div>
+              <span class="text-[10px] font-heading font-bold uppercase tracking-widest text-neutral-400">Booked Estimate Conversions</span>
+              <div class="font-heading font-extrabold text-xl text-lime-400 mt-0.5">+312% Conversion Lift</div>
+            </div>
+            <div class="flex items-end gap-1.5 h-12">
+              <span class="bento-bar w-2.5 h-5 rounded-t bg-gold-600/60" style="animation-delay:0.1s"></span>
+              <span class="bento-bar w-2.5 h-7 rounded-t bg-gold-500/75" style="animation-delay:0.3s"></span>
+              <span class="bento-bar w-2.5 h-9 rounded-t bg-gold-400" style="animation-delay:0.5s"></span>
+              <span class="bento-bar w-2.5 h-10 rounded-t bg-gold-300" style="animation-delay:0.7s"></span>
+              <span class="bento-bar w-2.5 h-12 rounded-t bg-lime-400" style="animation-delay:0.9s"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 02: Full-Funnel Attribution -->
+        <div class="md:col-span-5 spotlight-card bg-obsidian-900 text-white gold-border-hairline rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-heading font-extrabold text-2xl gold-text-gradient">02</span>
+              <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 border border-lime-400/30 px-3 py-1 rounded-full">100% Attribution</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-white mb-2.5">Full-Funnel Attribution</h3>
+            <p class="text-sm text-neutral-300 leading-relaxed mb-6">Complete GA4, GTM, Meta Pixel + CAPI, and CallRail dynamic call tracking so every booked roof or window job ties back to exact ad spend.</p>
+          </div>
+          <div class="bg-obsidian-950/95 rounded-2xl p-3.5 border border-gold-400/30 flex items-center justify-between text-xs">
+            <span class="font-heading font-bold text-white">Event: EstimateBooked_CAPI</span>
+            <span class="inline-flex items-center gap-1.5 text-lime-400 font-bold"><span class="w-2 h-2 rounded-full bg-lime-400 animate-ping"></span> Verified</span>
+          </div>
+        </div>
+
+        <!-- Card 03: Exclusive Paid Ads -->
+        <div class="md:col-span-5 spotlight-card bg-white text-obsidian-900 border border-neutral-200 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-heading font-extrabold text-2xl text-gold-600">03</span>
+              <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-obsidian-900 bg-gold-200 px-3 py-1 rounded-full">Zero Shared Leads</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-obsidian-900 mb-2.5">Exclusive Paid Ads</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed mb-6">Stop bidding against 5 competitors on Angi. We launch hyper-local Meta &amp; Google Search campaigns delivering 100% exclusive homeowner leads directly to you.</p>
+          </div>
+          <div class="bg-obsidian-900 rounded-2xl p-3.5 border border-gold-400/30 flex items-center justify-between text-xs">
+            <span class="text-neutral-300">Target Exclusive Lead Cost</span>
+            <span class="font-heading font-extrabold text-gold-300 text-sm">~$42 / Exclusive Lead</span>
+          </div>
+        </div>
+
+        <!-- Card 04: 5-Platform Organic -->
+        <div class="md:col-span-7 spotlight-card bg-white text-obsidian-900 border border-neutral-200 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-md">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-heading font-extrabold text-2xl text-gold-600">04</span>
+              <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-lime-500 bg-lime-400/15 px-3 py-1 rounded-full">FB · IG · LinkedIn · YouTube · TikTok</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-obsidian-900 mb-2.5">5-Platform Organic</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed mb-6">We create and publish daily high-converting targeted posts, before/after project transformations, YouTube SEO walk-throughs, TikTok reels, and LinkedIn B2B authority content across all 5 channels.</p>
+          </div>
+          <div class="bg-obsidian-900 text-white rounded-2xl p-4 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <span class="font-heading font-bold text-gold-300">Daily Targeted Publishing Active</span>
+            <span class="text-neutral-300">FB · IG · LinkedIn · YouTube · TikTok</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. SECTION 02: TRACKING & ATTRIBUTION STACK ==================== -->
+  <section id="section-tracking-stack" class="page-section relative z-20 py-20 lg:py-24 bg-obsidian-900 text-white luxury-grid-bg border-t border-gold-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-300 mb-2">Section 02 · Tracking &amp; Attribution Stack</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Enterprise Ad-Tracking &amp; Attribution Engineering</h2>
+          <p class="text-neutral-300 mt-3 text-sm sm:text-base">Most contractors waste 40%+ of their ad budget because Meta and Google cannot see which clicks turned into booked estimates. We wire GA4, GTM, Meta Pixel &amp; CAPI, and CallRail directly into your funnel.</p>
+        </div>
+        <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/40 text-lime-400 font-heading font-extrabold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full self-start">
+          <span class="w-2 h-2 rounded-full bg-lime-400 animate-ping"></span>
+          <span>100% Server &amp; Browser Verified</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-heading font-extrabold uppercase tracking-wider text-gold-300 bg-gold-400/15 px-3 py-1 rounded-full">Pillar 01</span>
+            <span class="text-xs font-mono text-lime-400">GA4 Active</span>
+          </div>
+          <h3 class="font-heading font-extrabold text-lg text-white mb-2">GA4 Custom Event Funnel</h3>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Tracks every step from landing page view to quote calculator interaction, phone tap, and confirmed inspection booking across mobile and desktop.</p>
+        </div>
+
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-heading font-extrabold uppercase tracking-wider text-gold-300 bg-gold-400/15 px-3 py-1 rounded-full">Pillar 02</span>
+            <span class="text-xs font-mono text-lime-400">GTM Container</span>
+          </div>
+          <h3 class="font-heading font-extrabold text-lg text-white mb-2">GTM Web &amp; Server Tagging</h3>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Clean, zero-bloat DataLayer architecture routing first-party conversion signals to all ad platforms without slowing down your 2-second page load.</p>
+        </div>
+
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-heading font-extrabold uppercase tracking-wider text-gold-300 bg-gold-400/15 px-3 py-1 rounded-full">Pillar 03</span>
+            <span class="text-xs font-mono text-lime-400">Pixel + CAPI</span>
+          </div>
+          <h3 class="font-heading font-extrabold text-lg text-white mb-2">Meta Pixel &amp; Server CAPI</h3>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Bypasses iOS privacy signal loss with deduplicated server-side events (`Lead`, `Schedule`, `Contact`) so Meta's AI targets high-equity homeowners.</p>
+        </div>
+
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-heading font-extrabold uppercase tracking-wider text-gold-300 bg-gold-400/15 px-3 py-1 rounded-full">Pillar 04</span>
+            <span class="text-xs font-mono text-lime-400">Dynamic DNI</span>
+          </div>
+          <h3 class="font-heading font-extrabold text-lg text-white mb-2">CallRail Call Attribution</h3>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Swaps tracking phone numbers dynamically by traffic source (Facebook Ad vs. Google Search vs. Organic) and logs qualified calls over 60 seconds as conversions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. SECTION 03: 5-PLATFORM ORGANIC SOCIAL AUTHORITY ==================== -->
+  <section id="section-organic-social" class="page-section relative z-20 py-20 lg:py-24 bg-ivory text-obsidian-900 border-t border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-600 mb-2">Section 03 · 5-Platform Organic Social Authority</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-obsidian-900">Omnichannel Social Media Management &amp; Organic Growth</h2>
+        <p class="text-neutral-600 mt-3 text-base">When homeowners see your ad, the first thing they do is check your social profiles. We create and publish daily high-converting targeted content across <strong class="text-obsidian-900">Facebook, Instagram, LinkedIn, YouTube &amp; TikTok</strong> so clients trust and hire you organically.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+        <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm hover:border-gold-400 transition">
+          <span class="inline-block bg-blue-600 text-white font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-md mb-3">Facebook</span>
+          <h3 class="font-heading font-extrabold text-base text-obsidian-900 mb-1.5">Local Homeowner Trust</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">Storm alerts, 5-star review graphics, neighborhood job check-ins, and local community group authority posts.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm hover:border-gold-400 transition">
+          <span class="inline-block bg-gradient-to-r from-pink-600 to-amber-500 text-white font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-md mb-3">Instagram</span>
+          <h3 class="font-heading font-extrabold text-base text-obsidian-900 mb-1.5">Before &amp; After Reels</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">High-contrast shingle &amp; window transformations, crew craftsmanship reels, and story highlights that build instant visual proof.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm hover:border-gold-400 transition">
+          <span class="inline-block bg-sky-700 text-white font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-md mb-3">LinkedIn</span>
+          <h3 class="font-heading font-extrabold text-base text-obsidian-900 mb-1.5">Commercial &amp; B2B Deals</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">Positions you directly in front of property managers, HOA boards, realtors, and insurance adjusters for high-ticket commercial contracts.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm hover:border-gold-400 transition">
+          <span class="inline-block bg-red-600 text-white font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-md mb-3">YouTube</span>
+          <h3 class="font-heading font-extrabold text-base text-obsidian-900 mb-1.5">Video SEO &amp; Shorts</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">Search-optimized roof inspection walk-throughs, material comparisons, and YouTube Shorts that rank on Google for local searches.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm hover:border-gold-400 transition">
+          <span class="inline-block bg-obsidian-900 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-md mb-3">TikTok</span>
+          <h3 class="font-heading font-extrabold text-base text-obsidian-900 mb-1.5">Viral Local Reach</h3>
+          <p class="text-xs text-neutral-600 leading-relaxed">Fast-paced storm damage breakdowns, homeowner warning tips, and time-lapse installs generating thousands of free local views.</p>
+        </div>
+      </div>
+
+      <!-- Interactive Content Engine Previewer -->
+      <div class="bg-obsidian-900 text-white rounded-3xl border-2 border-gold-400/50 p-6 sm:p-10 shadow-2xl">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-6 border-b border-gold-400/20">
+          <div>
+            <span class="text-xs font-heading font-extrabold uppercase tracking-[0.2em] text-gold-300">Interactive Content Engine Preview</span>
+            <h3 class="font-heading font-extrabold text-2xl text-white mt-1">See The High-Converting Posts We Publish For Your Brand</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 bg-obsidian-950 p-1.5 rounded-2xl border border-gold-400/35">
+            <button type="button" id="postTabBtn0" onclick="switchPostTab(0)" class="px-3.5 py-2 rounded-xl font-heading font-extrabold text-[11px] uppercase tracking-wider gold-gradient-bg text-obsidian-950 transition">Storm Alert Post</button>
+            <button type="button" id="postTabBtn1" onclick="switchPostTab(1)" class="px-3.5 py-2 rounded-xl font-heading font-bold text-[11px] uppercase tracking-wider text-white hover:text-gold-300 transition">Before/After Project</button>
+            <button type="button" id="postTabBtn2" onclick="switchPostTab(2)" class="px-3.5 py-2 rounded-xl font-heading font-bold text-[11px] uppercase tracking-wider text-white hover:text-gold-300 transition">LinkedIn Commercial B2B</button>
+            <button type="button" id="postTabBtn3" onclick="switchPostTab(3)" class="px-3.5 py-2 rounded-xl font-heading font-bold text-[11px] uppercase tracking-wider text-white hover:text-gold-300 transition">YouTube &amp; TikTok SEO</button>
+          </div>
+        </div>
+
+        <div id="postPanel0" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-3">
+            <span class="inline-block bg-blue-500/20 text-blue-300 font-heading font-extrabold text-[11px] uppercase tracking-widest px-3 py-1 rounded-full">Facebook Local Conversion Post</span>
+            <h4 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Neighborhood Hail &amp; Wind Inspection Post</h4>
+            <p class="text-sm text-neutral-300 leading-relaxed">Published within 2 hours of local severe weather. Drives high-intent homeowners directly to your free inspection booking link without paying per click.</p>
+            <div class="flex flex-wrap gap-2 pt-1 text-xs font-heading font-bold text-gold-300">
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-gold-400/30">Avg. Organic Reach: 4,200+ Locals</span>
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-lime-400/30 text-lime-400">6–11 Organic Leads/Post</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 bg-obsidian-950 rounded-2xl border border-gold-400/35 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-heading font-bold text-white">Your Roofing &amp; Exterior Co. · <span class="text-gold-300">Sponsored-Style Organic</span></span>
+              <span class="text-neutral-400">Just now · 🌐</span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+              ⚠️ <strong class="text-white">HOMEOWNERS IN AUSTIN &amp; ROUND ROCK:</strong> Last night's 60mph hail &amp; wind gusts lifted shingle seals across 14 neighborhoods—even if you don't see a ceiling leak yet.<br/><br/>
+              Our certified drone team is offering <strong class="text-gold-300">15 Complimentary 21-Point Roof &amp; Window Photo Audits</strong> this week before insurance claim deadlines close. 👇
+            </p>
+            <div class="bg-obsidian-800 rounded-xl p-3.5 border border-gold-400/30 flex items-center justify-between">
+              <span class="text-xs font-heading font-bold text-white">Book Free 21-Point Photo Inspection</span>
+              <span class="gold-gradient-bg text-obsidian-950 font-heading font-extrabold text-[11px] px-3 py-1.5 rounded-lg">Claim Slot →</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="postPanel1" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-3">
+            <span class="inline-block bg-pink-500/20 text-pink-300 font-heading font-extrabold text-[11px] uppercase tracking-widest px-3 py-1 rounded-full">Instagram Carousel &amp; Reel</span>
+            <h4 class="font-heading font-extrabold text-xl sm:text-2xl text-white">1-Day Architectural Shingle &amp; Window Makeover</h4>
+            <p class="text-sm text-neutral-300 leading-relaxed">Showcases your crew's clean job site, magnetic nail sweep, and dramatic curb-appeal upgrade—turning passive scrollers into warm inbound DMs.</p>
+            <div class="flex flex-wrap gap-2 pt-1 text-xs font-heading font-bold text-gold-300">
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-gold-400/30">High Save &amp; Share Rate</span>
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-lime-400/30 text-lime-400">Direct DM Quote Funnel</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 bg-obsidian-950 rounded-2xl border border-gold-400/35 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-heading font-bold text-white">@yourcontractorbrand · <span class="text-pink-400">Instagram Reel</span></span>
+              <span class="text-lime-400 font-bold">9.4K Local Views</span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+              ✨ <strong class="text-white">From 22-Year-Old Storm-Damaged Shingles to Charcoal Architectural Perfection in 1 Day!</strong><br/><br/>
+              ✅ Zero-down 0% APR financing available<br/>
+              ✅ 50-Year transferable workmanship warranty<br/>
+              💬 DM us <strong class="text-gold-300">"QUOTE"</strong> for an instant satellite roof &amp; window estimate!
+            </p>
+            <div class="bg-obsidian-800 rounded-xl p-3 border border-white/10 flex items-center justify-between text-xs text-gold-300 font-bold">
+              <span>❤️ 418 Likes · 💬 34 Quote Inquiries</span>
+              <span>Link in Bio ↗</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="postPanel2" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-3">
+            <span class="inline-block bg-sky-500/20 text-sky-300 font-heading font-extrabold text-[11px] uppercase tracking-widest px-3 py-1 rounded-full">LinkedIn B2B Commercial Authority</span>
+            <h4 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Commercial TPO, HOA &amp; Property Manager Outreach</h4>
+            <p class="text-sm text-neutral-300 leading-relaxed">Positions your company as the go-to commercial exterior partner for multi-family HOAs, warehouse owners, and commercial realtors.</p>
+            <div class="flex flex-wrap gap-2 pt-1 text-xs font-heading font-bold text-gold-300">
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-gold-400/30">$35,000–$180,000+ Job Ticket</span>
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-lime-400/30 text-lime-400">Decision-Maker Reach</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 bg-obsidian-950 rounded-2xl border border-gold-400/35 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-heading font-bold text-white">Founder · Commercial Roofing &amp; Exteriors</span>
+              <span class="text-sky-400 font-bold">LinkedIn Article</span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+              🏢 <strong class="text-white">Property Managers: How Preventive Infrared Roof Audits Save $48,000+ in Emergency Interior Water Damage.</strong><br/><br/>
+              We just completed a 45,000 sq. ft. TPO restoration with zero tenant downtime. Comment <strong class="text-gold-300">"AUDIT"</strong> to schedule a complimentary Q4 commercial building inspection.
+            </p>
+            <div class="bg-obsidian-800 rounded-xl p-3 border border-white/10 text-xs text-lime-400 font-bold">
+              ✓ Seen by 620+ Local Property Managers &amp; Facility Directors
+            </div>
+          </div>
+        </div>
+
+        <div id="postPanel3" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-3">
+            <span class="inline-block bg-red-500/20 text-red-300 font-heading font-extrabold text-[11px] uppercase tracking-widest px-3 py-1 rounded-full">YouTube SEO &amp; TikTok Short-Form</span>
+            <h4 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Evergreen Search Videos &amp; Viral Homeowner Tips</h4>
+            <p class="text-sm text-neutral-300 leading-relaxed">We edit and SEO-optimize your raw phone clips into high-retention YouTube videos and TikToks that rank on Google when locals search for roof or window costs.</p>
+            <div class="flex flex-wrap gap-2 pt-1 text-xs font-heading font-bold text-gold-300">
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-gold-400/30">Google Video Carousel Ranking</span>
+              <span class="bg-obsidian-950 px-3 py-1.5 rounded-lg border border-lime-400/30 text-lime-400">24/7 Evergreen Lead Asset</span>
+            </div>
+          </div>
+          <div class="lg:col-span-6 bg-obsidian-950 rounded-2xl border border-gold-400/35 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-heading font-bold text-white">YouTube + TikTok Dual Distribution</span>
+              <span class="text-red-400 font-bold">● SEO Ranked #1</span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+              🎬 <strong class="text-white">Video Title:</strong> <em>“How Much Does a New Architectural Shingle Roof Cost in 2026? (Honest Contractor Breakdown)”</em><br/><br/>
+              Includes custom thumbnail, local city keywords, chapter timestamps, and pinned free estimate link in description.
+            </p>
+            <div class="bg-obsidian-800 rounded-xl p-3 border border-white/10 text-xs text-gold-300 font-bold">
+              ▶ 14,800+ Local Homeowner Views · 29 Booked Estimates
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. SECTION 04: LIVE BENCHMARKS SHOWCASE (6 CARDS) ==================== -->
+  <section id="section-benchmarks" class="page-section relative z-20 py-20 lg:py-24 bg-obsidian-900 text-white luxury-grid-bg border-t border-gold-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-300 mb-2">Section 04 · Live US Industry Gold Standards</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Live Benchmarks Showcase</h2>
+          <p class="text-neutral-300 mt-3 text-sm sm:text-base">Click any live site below to inspect the exact conversion architecture, speed, and full-funnel ad tracking standards we engineer for our partner contractors.</p>
+        </div>
+        <button type="button" onclick="openAuditSection()" class="btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl self-start">Build My Benchmark Site →</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Card 1: Baker Roofing Company -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-1.png" alt="Baker Roofing Company Architectural Roofing Benchmark" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=Baker+Roofing+Company'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Enterprise Roofing Authority</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">Baker Roofing Company</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">Premier residential &amp; commercial roofing benchmark featuring rapid storm-response routing, location-based service hubs, and full-funnel lead attribution.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">Meta Pixel + CAPI</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">GA4 + GTM</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">CallRail DNI</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://bakerroofing.com" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Able Roofing -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-2.png" alt="Able Roofing Residential Exterior" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=Able+Roofing'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Storm &amp; Leak Funnel</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">Able Roofing</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">Multi-path emergency leak &amp; storm damage routing right below the hero, instant financing banners, and high-converting retargeting pixels.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">Dynamic Call Tracking</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">Meta Ads + GA4</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">GTM Server</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://ableroofing.com" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Roofing Giant -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-3.png" alt="Roofing Giant Residential Roof" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=Roofing+Giant'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">30-Point Inspection Offer</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">Roofing Giant</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">Engineered for high-intent Meta &amp; Google Ads with a 30-point free inspection booking card, 24/7 storm timer, and insurance claim guidance.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">Meta CAPI Verified</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">Google Enhanced Conv.</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">SMS Webhook</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://roofinggiant.com" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Bill Ragan Roofing -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-4.png" alt="Bill Ragan Roofing Nashville Home" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=Bill+Ragan+Roofing'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Interactive Cost Calculator</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">Bill Ragan Roofing</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">Pairs educational homeowner content and YouTube video authority with an instant Roof Cost Calculator that captures high-intent leads.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">GA4 Funnel Events</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">YouTube SEO Sync</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">GTM DataLayer</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://www.billraganroofing.com" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Renewal by Andersen -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-5.png" alt="Renewal by Andersen Luxury Windows and Doors Exterior" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=Renewal+by+Andersen'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Windows &amp; Doors Gold Standard</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">Renewal by Andersen</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">The premier benchmark for window &amp; door contractors—combining zero-down financing offers, consultation scheduling, and full-funnel tracking.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">Meta + Google CAPI</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">CallRail Attribution</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">CRM Sync</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://www.renewalbyandersen.com" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 6: DaBella -->
+        <div class="spotlight-card bg-obsidian-800/95 gold-border-hairline rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="relative h-48 overflow-hidden bg-obsidian-950">
+              <img src="bench-6.png" alt="DaBella Modern Exterior Remodeling Benchmark" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/900x500/121318/D4AF37?text=DaBella'" />
+              <span class="absolute top-3 left-3 bg-obsidian-950/90 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Roofing, Siding &amp; Windows</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-extrabold text-xl text-white mb-1.5">DaBella</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4">High-converting multi-trade exterior remodeling powerhouse pairing instant consultation booking, zero-down financing banners, and multi-channel tracking.</p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] font-heading font-bold bg-lime-400/15 text-lime-400 border border-lime-400/30 px-2.5 py-0.5 rounded-md">Meta Pixel + GA4</span>
+                <span class="text-[10px] font-heading font-bold bg-gold-400/15 text-gold-300 border border-gold-400/30 px-2.5 py-0.5 rounded-md">GTM Event Tracking</span>
+                <span class="text-[10px] font-heading font-bold bg-white/10 text-white px-2.5 py-0.5 rounded-md">5-Star Proof</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="https://dabella.us" target="_blank" rel="noopener noreferrer" class="block w-full bg-obsidian-950 hover:bg-gold-400 hover:text-obsidian-950 border border-gold-400/50 text-gold-300 font-heading font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl text-center transition">VISIT LIVE BENCHMARK SITE ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. SECTION 05: INTERACTIVE CONTRACTOR ROI CALCULATOR ==================== -->
+  <section id="section-calculator" class="page-section relative z-20 py-20 lg:py-24 bg-obsidian-950 text-white border-t border-gold-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-obsidian-900 rounded-3xl gold-border-hairline p-7 sm:p-10 lg:p-12 shadow-2xl">
+        <div class="lg:col-span-7 space-y-6">
+          <span id="calcTradeLabel" class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-400">Section 05 · Interactive Contractor ROI Calculator</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Model Your Monthly Net Contract Profit</h2>
+          <p class="text-neutral-300 text-sm sm:text-base">Slide your monthly ad budget and average net profit per completed project to see what tracked, exclusive leads produce.</p>
+
+          <div>
+            <div class="flex justify-between font-heading font-bold text-sm text-white mb-2.5">
+              <span>Monthly Ad Spend:</span>
+              <span id="adSpendDisplay" class="text-gold-300 text-lg">$3,000 / mo</span>
+            </div>
+            <input id="adSpendSlider" type="range" min="1500" max="15000" step="250" value="3000" oninput="recalculateContractorROI()" class="w-full" />
+            <div class="flex justify-between text-[11px] text-neutral-500 mt-1">
+              <span>$1,500/mo</span>
+              <span>$15,000/mo</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between font-heading font-bold text-sm text-white mb-2.5">
+              <span id="jobProfitLabel">Average Net Profit Per Roof Job:</span>
+              <span id="jobProfitDisplay" class="text-white text-lg">$5,500 / job</span>
+            </div>
+            <input id="jobProfitSlider" type="range" min="3500" max="18000" step="500" value="5500" oninput="recalculateContractorROI()" class="w-full" />
+            <div class="flex justify-between text-[11px] text-neutral-500 mt-1">
+              <span>$3,500/job</span>
+              <span>$18,000/job</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-obsidian-950 rounded-2xl border-2 border-gold-400/60 p-7 sm:p-8 shadow-2xl space-y-5">
+          <div class="grid grid-cols-3 gap-3 pb-4 border-b border-gold-400/20 text-center sm:text-left">
+            <div>
+              <span class="text-[10px] font-heading font-bold uppercase tracking-wider text-neutral-400 block">Exclusive Leads</span>
+              <span id="calcLeads" class="font-heading font-extrabold text-2xl text-white mt-1 block">71</span>
+            </div>
+            <div>
+              <span class="text-[10px] font-heading font-bold uppercase tracking-wider text-neutral-400 block">Estimates Set</span>
+              <span id="calcInspections" class="font-heading font-extrabold text-2xl text-gold-300 mt-1 block">46</span>
+            </div>
+            <div>
+              <span class="text-[10px] font-heading font-bold uppercase tracking-wider text-neutral-400 block">Closed Jobs</span>
+              <span id="calcClosed" class="font-heading font-extrabold text-2xl text-lime-400 mt-1 block">14</span>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-[11px] font-heading font-bold uppercase tracking-[0.2em] text-neutral-400">Projected Monthly Net Profit</span>
+            <div id="calcNetProfit" class="font-heading font-extrabold text-4xl sm:text-5xl gold-text-gradient mt-1">$77,000 / mo</div>
+            <p class="text-xs text-neutral-400 mt-2">Modeled at ~$42/exclusive lead, 65% estimate set rate, and 30% close rate.</p>
+          </div>
+
+          <button type="button" onclick="openAuditSection()" class="block w-full btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider py-4 rounded-xl text-center">
+            GET FREE AUDIT →
+          </button>
+        </div>
+      </div>
+
+      <!-- Territory Availability Checker -->
+      <div id="city-check" class="bg-obsidian-900 rounded-3xl border-2 border-gold-400/50 p-7 sm:p-10 shadow-2xl text-center">
+        <span class="inline-block bg-gold-400/15 border border-gold-400/40 text-gold-300 font-heading font-extrabold text-[11px] uppercase tracking-[0.22em] px-4 py-1 rounded-full mb-3">Strict 1 Contractor Per City &amp; Trade Policy</span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white">Check If Your City &amp; Trade Territory Is Open</h2>
+        <p class="text-neutral-300 text-sm sm:text-base max-w-2xl mx-auto mt-2 mb-6">We never work with competing roofers, window companies, or exterior contractors in the same city. Check your territory availability right now.</p>
+
+        <form onsubmit="verifyCityTerritory(event)" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+          <input id="cityInput" type="text" required placeholder="Enter Your City, Zip Code &amp; Trade (e.g., 78701 Austin - Roofing)..." class="flex-1 rounded-xl bg-obsidian-950 border border-gold-400/45 px-4 py-4 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+          <button type="submit" class="btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider px-7 py-4 rounded-xl shrink-0">Check Availability</button>
+        </form>
+
+        <div id="cityResultBox" class="hidden max-w-xl mx-auto mt-5 bg-lime-500/10 border border-lime-400/50 rounded-2xl p-4 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-lime-400 shrink-0 animate-ping"></span>
+            <p id="cityResultText" class="text-xs sm:text-sm font-semibold text-white"></p>
+          </div>
+          <button type="button" onclick="openAuditSection()" class="btn-gold-shimmer font-heading font-extrabold text-[11px] uppercase tracking-wider px-4 py-2.5 rounded-xl shrink-0 text-center">Lock Territory →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9, 10 & 11. SECTIONS 06, 07 & 08: PARTNERSHIP TIERS, FOUNDER ACCOUNTABILITY & AUDIT FORM ==================== -->
+  <section id="section-packages" class="page-section relative z-20 py-20 lg:py-24 bg-ivory text-obsidian-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- SECTION 06: Custom-Quote Partnership Tiers -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block font-heading font-extrabold text-xs uppercase tracking-[0.24em] text-gold-600 mb-2">Section 06 · Custom-Quote Partnership Tiers</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-obsidian-900">Flexible, Stage-Matched Contractor Partnerships</h2>
+        <p class="text-neutral-600 mt-3 text-base">Every city and crew size has different growth goals. Instead of rigid one-size-fits-all fees, we tailor your exact partnership investment to your crew size, service area, and monthly revenue target—with 100% ownership of all assets.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-14">
+        <!-- Tier 01: Foundation -->
+        <div class="bg-white rounded-3xl border border-neutral-200 p-8 shadow-sm flex flex-col justify-between hover:border-gold-400 transition">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-heading font-extrabold uppercase tracking-widest text-gold-600">Tier 01 · Foundation</span>
+              <span class="text-[11px] font-heading font-bold bg-neutral-100 text-obsidian-900 px-3 py-1 rounded-full">Custom Quote</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-obsidian-900 mb-2">Foundation</h3>
+            <p class="text-xs text-neutral-500 mb-6">Ideal for growing local contractors ready to establish omnipresent authority and bullet-proof tracking.</p>
+            <ul class="space-y-3 text-sm text-neutral-700 mb-8">
+              <li>✦ Custom High-Converting 2s Landing Funnel</li>
+              <li>✦ Full GA4, GTM &amp; Meta Pixel + CAPI Setup</li>
+              <li>✦ 5-Platform Organic Social Management (FB, IG, LI, YT, TT)</li>
+              <li>✦ Google Business Profile &amp; 5-Star Review Automation</li>
+            </ul>
+          </div>
+          <button type="button" onclick="selectPackageForAudit('Tier 01: Foundation')" class="w-full bg-obsidian-900 hover:bg-obsidian-800 text-white font-heading font-bold text-xs uppercase tracking-wider py-4 rounded-xl text-center transition">
+            REQUEST CUSTOM QUOTE
+          </button>
+        </div>
+
+        <!-- Tier 02: Full-Scale Growth Engine -->
+        <div class="bg-obsidian-900 text-white rounded-3xl border-2 border-gold-400 p-8 shadow-2xl relative flex flex-col justify-between">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 gold-gradient-bg text-obsidian-950 font-heading font-extrabold text-[11px] uppercase tracking-widest px-4 py-1 rounded-full shadow-md whitespace-nowrap">Most Requested By Contractors</span>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3 mt-1">
+              <span class="text-xs font-heading font-extrabold uppercase tracking-widest text-gold-300">Tier 02 · Growth Engine</span>
+              <span class="text-[11px] font-heading font-bold bg-gold-400/15 border border-gold-400/40 text-gold-200 px-3 py-1 rounded-full">Custom Quote</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-white mb-2">Full-Scale Growth Engine</h3>
+            <p class="text-xs text-neutral-300 mb-6">Complete Paid Ads + 2s Website Funnel + Full-Funnel Tracking + Daily 5-Platform Organic Dominance.</p>
+            <ul class="space-y-3 text-sm text-neutral-200 mb-8">
+              <li class="text-gold-200">✦ Exclusive Facebook, Instagram &amp; Google Lead Campaigns</li>
+              <li>✦ Custom 2-Second Multi-Section Contractor Site</li>
+              <li>✦ Full Tracking Stack (GA4, GTM, Meta CAPI, CallRail)</li>
+              <li>✦ Daily Organic Posts Across FB, IG, LinkedIn, YT &amp; TikTok</li>
+              <li>✦ Automated Under-60s SMS Speed-to-Lead Follow-Up</li>
+            </ul>
+          </div>
+          <button type="button" onclick="selectPackageForAudit('Tier 02: Full-Scale Growth Engine (Most Requested)')" class="w-full btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider py-4 rounded-xl text-center">
+            REQUEST CUSTOM QUOTE
+          </button>
+        </div>
+
+        <!-- Tier 03: Market Domination -->
+        <div class="bg-white rounded-3xl border border-neutral-200 p-8 shadow-sm flex flex-col justify-between hover:border-gold-400 transition">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-heading font-extrabold uppercase tracking-widest text-gold-600">Tier 03 · Dominance</span>
+              <span class="text-[11px] font-heading font-bold bg-neutral-100 text-obsidian-900 px-3 py-1 rounded-full">Custom Quote</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-obsidian-900 mb-2">Market Domination</h3>
+            <p class="text-xs text-neutral-500 mb-6">Built for established multi-crew operations dominating entire metro regions across residential &amp; commercial.</p>
+            <ul class="space-y-3 text-sm text-neutral-700 mb-8">
+              <li>✦ Full County / Multi-City Territory Exclusivity</li>
+              <li>✦ Dedicated Storm-Surge &amp; Seasonal Ad Scaling</li>
+              <li>✦ Full YouTube SEO + Shorts/Reels + LinkedIn B2B Outreach</li>
+              <li>✦ Direct 1-on-1 Weekly Strategy Call with Founder</li>
+            </ul>
+          </div>
+          <button type="button" onclick="selectPackageForAudit('Tier 03: Market Domination')" class="w-full bg-obsidian-900 hover:bg-obsidian-800 text-white font-heading font-bold text-xs uppercase tracking-wider py-4 rounded-xl text-center transition">
+            REQUEST CUSTOM QUOTE
+          </button>
+        </div>
+      </div>
+
+      <!-- SECTION 07: Founder Accountability & About Section -->
+      <div id="about-founder" class="bg-obsidian-950 text-white rounded-3xl border-2 border-gold-400/50 p-7 sm:p-10 shadow-2xl mb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-3 flex justify-center">
+            <div onclick="triggerFounderPhotoPicker()" title="Click to upload and preview your portrait photo" class="group/photo cursor-pointer relative w-44 h-44 sm:w-48 sm:h-48">
+              <div class="absolute -inset-1.5 rounded-3xl gold-gradient-bg opacity-80 blur-[2px]"></div>
+              <div class="relative w-full h-full rounded-3xl overflow-hidden bg-obsidian-900 border-2 border-gold-400 shadow-2xl">
+                <img
+                  src="founder.png"
+                  alt="Jasidul Islam Hridoy - Founder of JIR Digital"
+                  class="founder-portrait-img w-full h-full object-cover object-top transition duration-300 group-hover/photo:scale-105"
+                  onerror="handleFounderImgError(this)"
+                />
+                <div class="founder-monogram-fallback hidden w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-obsidian-800 to-obsidian-950">
+                  <span class="font-heading font-extrabold text-3xl gold-text-gradient">JIH</span>
+                  <span class="text-[10px] uppercase tracking-widest text-gold-300 mt-1">FOUNDER</span>
+                </div>
+                <div class="absolute top-2.5 right-2.5 bg-obsidian-950/85 backdrop-blur-md border border-gold-400/60 text-gold-300 rounded-lg px-2 py-1 text-[9px] font-heading font-extrabold uppercase tracking-wider opacity-0 group-hover/photo:opacity-100 transition flex items-center gap-1 shadow-lg">
+                  <span>📷</span>
+                  <span>Photo</span>
+                </div>
+              </div>
+              <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-obsidian-900 text-gold-300 border border-gold-400/60 font-heading font-extrabold text-[10px] uppercase tracking-widest px-3.5 py-1 rounded-full">✦ 1-on-1 Founder Execution</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-9 space-y-4">
+            <span class="text-xs font-heading font-extrabold uppercase tracking-[0.22em] text-gold-400">Section 07 · Founder Accountability &amp; About</span>
+            <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">Work Directly With Jasidul Islam Hridoy — Never Outsourced Juniors</h3>
+            <p class="text-sm sm:text-base text-neutral-300 leading-relaxed">
+              “Big agencies pitch you on a sales call and hand your account to an inexperienced coordinator managing 60 clients. At JIR Digital, <strong class="text-white">I personally architect your 2-second website, wire your GA4/GTM/Meta CAPI/CallRail tracking stack, manage your exclusive ad campaigns, and oversee your 5-platform organic content</strong>—backed by 6+ years of hands-on experience, 700+ channels scaled, and 100+ businesses grown.”
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-xs font-heading font-bold text-gold-200">
+              <div class="bg-obsidian-900 border border-gold-400/25 rounded-xl px-3.5 py-2.5">✦ 6+ Yrs Experience</div>
+              <div class="bg-obsidian-900 border border-gold-400/25 rounded-xl px-3.5 py-2.5">✦ 700+ Channels Scaled</div>
+              <div class="bg-obsidian-900 border border-gold-400/25 rounded-xl px-3.5 py-2.5">✦ 100+ Businesses Grown</div>
+              <div class="bg-obsidian-900 border border-gold-400/25 rounded-xl px-3.5 py-2.5">✦ 1 Contractor Per City</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 08: Free Website, Tracking & Territory Audit Form -->
+      <div id="audit" class="bg-obsidian-900 text-white gold-border-hairline rounded-3xl p-7 sm:p-12 shadow-2xl max-w-4xl mx-auto transition-shadow duration-500">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <div class="inline-flex items-center gap-2.5 bg-obsidian-950 border border-gold-400/45 rounded-full pl-1.5 pr-4 py-1 mb-3.5 shadow-md">
+            <div class="w-7 h-7 rounded-full overflow-hidden border border-gold-400 bg-obsidian-800 shrink-0 flex items-center justify-center">
+              <img
+                src="founder.png"
+                alt="Jasidul Islam Hridoy"
+                class="founder-portrait-img w-full h-full object-cover object-top"
+                onerror="handleFounderImgError(this)"
+              />
+              <span class="founder-monogram-fallback hidden font-heading font-extrabold text-[10px] gold-text-gradient">JIH</span>
+            </div>
+            <span class="text-gold-300 font-heading font-extrabold text-[11px] uppercase tracking-[0.18em]">Section 08 · Direct 1-on-1 Audit with Jasidul Islam Hridoy</span>
+          </div>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Get Your Free Website, Tracking &amp; Territory Audit</h2>
+          <p class="text-sm sm:text-base text-neutral-300 mt-2.5">Enter your company details below. Jasidul Islam Hridoy will personally audit your website speed, GA4/GTM/Meta Pixel setup, and local social presence—plus send a tailored growth roadmap and custom quote matched to your crew size.</p>
+        </div>
+
+        <form id="finalAuditForm" onsubmit="submitFinalAudit(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" required placeholder="Your Full Name *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+            <input type="text" required placeholder="Company Name &amp; Trade (Roofing, Windows, etc.) *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" required placeholder="Website URL (or Facebook Page) *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+            <input type="text" required placeholder="City &amp; State / Service Area *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" required placeholder="Phone / WhatsApp Number *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+            <input type="email" required placeholder="Best Email for Audit Report Delivery *" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-300" />
+          </div>
+          <div>
+            <label for="auditTierSelect" class="block text-xs font-heading font-bold uppercase tracking-wider text-gold-300 mb-1.5">Preferred Partnership Tier / Custom Quote Interest</label>
+            <select id="auditTierSelect" class="w-full rounded-xl bg-obsidian-950 border border-gold-400/35 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-gold-300">
+              <option value="Tier 02: Full-Scale Growth Engine (Most Requested)">Tier 02: Full-Scale Growth Engine (Most Requested)</option>
+              <option value="Tier 01: Foundation">Tier 01: Foundation</option>
+              <option value="Tier 03: Market Domination">Tier 03: Market Domination</option>
+              <option value="Custom Stage-Matched Quote">Not Sure Yet — Send My Stage-Matched Quote</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <button type="submit" class="flex-1 btn-gold-shimmer font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl">
+              GET FREE AUDIT &amp; CUSTOM QUOTE
+            </button>
+            <a href="https://wa.me/8801744353574?text=Hi%20Hridoy%2C%20I%27d%20like%20a%20Free%20Website%2C%20Tracking%20%26%20Territory%20Audit%20and%20Custom%20Quote%20for%20my%20construction%2Froofing%20company." target="_blank" rel="noopener noreferrer" class="flex-1 bg-white hover:bg-neutral-100 text-obsidian-950 font-heading font-extrabold text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl text-center transition">
+              Message Founder on WhatsApp
+            </a>
+          </div>
+        </form>
+
+        <div id="finalAuditSuccess" class="hidden text-center py-8">
+          <div class="w-16 h-16 rounded-full gold-gradient-bg text-obsidian-950 flex items-center justify-center mx-auto mb-4 text-3xl font-extrabold">✓</div>
+          <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">Your Free Audit &amp; Custom Quote Are Reserved!</h3>
+          <p class="text-sm sm:text-base text-neutral-300 max-w-lg mx-auto mt-2">Jasidul Islam Hridoy will inspect your website, GA4/GTM/Meta Pixel setup, and social profiles and deliver your custom growth audit report and stage-matched quote within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 12. COMPLETE MULTI-COLUMN FOOTER ==================== -->
+  <footer class="relative z-20 bg-obsidian-950 text-neutral-400 border-t border-gold-400/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Column 1: Brand Emblem, Positioning & Animated 5-Platform Social Buttons -->
+      <div class="space-y-5">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-[#0E1B33] overflow-hidden border border-gold-400/70 flex items-center justify-center p-1.5 shadow-[0_0_20px_rgba(212,175,55,0.25)]">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JIR Digital Emblem">
+              <circle cx="50" cy="50" r="44" fill="#0E1B33"/>
+              <path d="M12 63A42 42 0 1 1 89 35L62 42L66 47L44 65L29 51L12 63Z" fill="#22C55E"/>
+              <path d="M15 68L29 56L44 71L70 49L76 56L89 35A42 42 0 0 1 15 68Z" fill="#FFFFFF"/>
+              <rect x="27" y="42" width="8" height="14" fill="#0E1B33"/>
+              <rect x="40" y="33" width="8" height="28" fill="#0E1B33"/>
+              <rect x="53" y="22" width="8" height="31" fill="#0E1B33"/>
+              <path d="M10 69L29 53L44 68L68 47L75 55L89 35L63 41L69 47L44 62L29 48L10 69Z" fill="#0E1B33"/>
+            </svg>
+          </div>
+          <div>
+            <span class="block font-heading font-extrabold text-lg tracking-wider text-white leading-none">JIR <span class="gold-text-gradient">DIGITAL</span></span>
+            <span class="block font-heading font-bold text-[9px] tracking-[0.2em] text-lime-400 uppercase mt-1">MARKETING AGENCY</span>
+          </div>
+        </div>
+
+        <p class="text-xs leading-relaxed text-neutral-300">
+          Direct 1-on-1 growth partner for roofing, windows, siding, and exterior remodeling contractors—combining 2-second websites, GA4/GTM/CAPI attribution, exclusive paid ads, and 5-platform organic dominance.
+        </p>
+
+        <!-- Animated 5-Platform Social Media Icon Buttons (Hover Lift & Gold Glow) -->
+        <div>
+          <span class="block text-[10px] font-heading font-extrabold uppercase tracking-[0.2em] text-gold-300 mb-3">Connect Across All 5 Platforms:</span>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- REPLACE WITH YOUR FACEBOOK PROFILE/PAGE URL -->
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="social-footer-btn w-10 h-10 rounded-xl bg-obsidian-900 border border-gold-400/35 text-neutral-200 flex items-center justify-center">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+
+            <!-- REPLACE WITH YOUR INSTAGRAM PROFILE URL -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="social-footer-btn w-10 h-10 rounded-xl bg-obsidian-900 border border-gold-400/35 text-neutral-200 flex items-center justify-center">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+
+            <!-- REPLACE WITH YOUR LINKEDIN PROFILE URL -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" class="social-footer-btn w-10 h-10 rounded-xl bg-obsidian-900 border border-gold-400/35 text-neutral-200 flex items-center justify-center">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+
+            <!-- REPLACE WITH YOUR YOUTUBE CHANNEL URL -->
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube" class="social-footer-btn w-10 h-10 rounded-xl bg-obsidian-900 border border-gold-400/35 text-neutral-200 flex items-center justify-center">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+
+            <!-- REPLACE WITH YOUR TIKTOK PROFILE URL -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok" class="social-footer-btn w-10 h-10 rounded-xl bg-obsidian-900 border border-gold-400/35 text-neutral-200 flex items-center justify-center">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Navigation Links -->
+      <div>
+        <h4 class="font-heading font-extrabold text-xs uppercase tracking-[0.22em] text-gold-300 mb-4">Quick Navigation</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><button type="button" onclick="openNavTab('home')" class="hover:text-gold-300 transition">Home Overview</button></li>
+          <li><button type="button" onclick="openNavTab('solutions')" class="hover:text-gold-300 transition">Core Growth Solutions</button></li>
+          <li><button type="button" onclick="openNavTab('tracking-stack')" class="hover:text-gold-300 transition">Tracking &amp; Attribution Stack</button></li>
+          <li><button type="button" onclick="openNavTab('organic-social')" class="hover:text-gold-300 transition">5-Platform Organic Social</button></li>
+          <li><button type="button" onclick="openNavTab('benchmarks')" class="hover:text-gold-300 transition">Live Benchmarks Showcase</button></li>
+          <li><button type="button" onclick="openNavTab('calculator')" class="hover:text-gold-300 transition">Contractor ROI Calculator</button></li>
+          <li><button type="button" onclick="openNavTab('packages')" class="hover:text-gold-300 transition">Custom Partnership Tiers</button></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Construction Specialties -->
+      <div>
+        <h4 class="font-heading font-extrabold text-xs uppercase tracking-[0.22em] text-gold-300 mb-4">Construction Specialties</h4>
+        <ul class="space-y-2.5 text-xs font-medium">
+          <li><button type="button" onclick="openNavTab('home'); selectTrade(0);" class="hover:text-gold-300 transition">✦ Residential &amp; Commercial Roofing</button></li>
+          <li><button type="button" onclick="openNavTab('home'); selectTrade(1);" class="hover:text-gold-300 transition">✦ Windows &amp; Exterior Doors</button></li>
+          <li><button type="button" onclick="openNavTab('home'); selectTrade(2);" class="hover:text-gold-300 transition">✦ Siding &amp; Seamless Gutters</button></li>
+          <li><button type="button" onclick="openNavTab('home'); selectTrade(3);" class="hover:text-gold-300 transition">✦ Solar &amp; Exterior Remodeling</button></li>
+        </ul>
+        <div class="mt-5 inline-flex items-center gap-2 bg-obsidian-900 border border-gold-400/35 rounded-full px-3.5 py-1.5 text-[10px] font-heading font-extrabold uppercase tracking-wider text-gold-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-lime-400 animate-ping"></span>
+          <span>1 Contractor Per City &amp; Trade</span>
+        </div>
+      </div>
+
+      <!-- Column 4: Direct Founder Contact & Primary CTA -->
+      <div class="space-y-4">
+        <h4 class="font-heading font-extrabold text-xs uppercase tracking-[0.22em] text-gold-300">Direct Founder Contact</h4>
+        <div class="bg-obsidian-900 border border-gold-400/30 rounded-2xl p-4 space-y-2.5 text-xs">
+          <a href="mailto:mh3035921@gmail.com" class="flex items-center gap-2 text-neutral-200 hover:text-gold-300 transition font-medium">
+            <span class="text-gold-400">✉</span>
+            <span>mh3035921@gmail.com</span>
+          </a>
+          <a href="https://wa.me/8801744353574?text=Hi%20Hridoy%2C%20I%20would%20like%20a%20Free%20Audit%20for%20my%20construction%2Froofing%20company." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-neutral-200 hover:text-lime-400 transition font-medium">
+            <span class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+            <span>WhatsApp: +880 1744-353574</span>
+          </a>
+        </div>
+        <button type="button" onclick="openAuditSection()" class="block w-full btn-gold-shimmer font-heading font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl text-center shadow-lg">
+          GET FREE AUDIT →
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="border-t border-gold-400/15 py-5 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-neutral-500">
+        <span>© 2026 JIR Digital Marketing Agency. All Rights Reserved.</span>
+        <span>Founded &amp; Led 1-on-1 by <strong class="text-gold-300">Jasidul Islam Hridoy</strong> · Serving US, Canada, UK &amp; Australia.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hidden File Picker for Instant Sandbox Portrait Preview -->
+  <input id="founderPhotoInput" type="file" accept="image/*" class="hidden" onchange="handleFounderPhotoSelected(event)" />
+
+  <script>
+    // Founder Portrait Fallback Chain & Sandbox Live Preview Persistence
+    const founderFallbackChain = ['founder.jpg', 'profile.png', 'profile_5.png', 'image_e5dac0.jpg'];
+
+    function handleFounderImgError(imgEl) {
+      const step = parseInt(imgEl.dataset.fallbackStep || '0', 10);
+      if (step < founderFallbackChain.length) {
+        imgEl.dataset.fallbackStep = String(step + 1);
+        imgEl.src = founderFallbackChain[step];
+      } else {
+        imgEl.style.display = 'none';
+        const fallbackBox = imgEl.parentElement && imgEl.parentElement.querySelector('.founder-monogram-fallback');
+        if (fallbackBox) fallbackBox.classList.remove('hidden');
+      }
+    }
+
+    function applyFounderPortraitSrc(dataUrl) {
+      document.querySelectorAll('.founder-portrait-img').forEach(img => {
+        img.src = dataUrl;
+        img.style.display = '';
+        const fallbackBox = img.parentElement && img.parentElement.querySelector('.founder-monogram-fallback');
+        if (fallbackBox) fallbackBox.classList.add('hidden');
+      });
+    }
+
+    function triggerFounderPhotoPicker() {
+      const input = document.getElementById('founderPhotoInput');
+      if (input) input.click();
+    }
+
+    function handleFounderPhotoSelected(e) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const result = evt.target && evt.target.result;
+        if (typeof result === 'string') {
+          applyFounderPortraitSrc(result);
+          try {
+            localStorage.setItem('jir_founder_portrait', result);
+          } catch (err) {
+            // Ignore storage quota errors if image is very large
+          }
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const savedPortrait = localStorage.getItem('jir_founder_portrait');
+        if (savedPortrait) {
+          applyFounderPortraitSrc(savedPortrait);
+        }
+      } catch (err) {
+        // Ignore storage access restrictions
+      }
+    });
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileDrawer').classList.toggle('hidden');
+    }
+
+    // Dedicated Animated Tab View + Full All-in-One Scroll Switcher
+    const tabMeta = {
+      'home': { label: 'Full All-in-One Overview', sectionId: null },
+      'solutions': { label: 'Solutions (Core Growth System)', sectionId: 'section-solutions' },
+      'tracking-stack': { label: 'Tracking & Attribution Stack', sectionId: 'section-tracking-stack' },
+      'organic-social': { label: '5-Platform Organic Social Authority', sectionId: 'section-organic-social' },
+      'benchmarks': { label: 'Live Benchmarks Showcase', sectionId: 'section-benchmarks' },
+      'calculator': { label: 'Contractor ROI Calculator & Territory Check', sectionId: 'section-calculator' },
+      'packages': { label: 'Custom Partnerships & Founder Audit', sectionId: 'section-packages' }
+    };
+
+    function openNavTab(tabKey) {
+      const meta = tabMeta[tabKey] || tabMeta['home'];
+      const allSections = document.querySelectorAll('.page-section');
+      const breadcrumbBar = document.getElementById('tabBreadcrumbBar');
+      const activeTabLabel = document.getElementById('activeTabLabel');
+
+      Object.keys(tabMeta).forEach(key => {
+        const btn = document.getElementById('navBtn-' + key);
+        if (btn) {
+          if (key === tabKey) {
+            btn.classList.add('active-nav');
+          } else {
+            btn.classList.remove('active-nav');
+          }
+        }
+      });
+
+      if (tabKey === 'home') {
+        if (breadcrumbBar) breadcrumbBar.classList.add('hidden');
+        allSections.forEach(sec => {
+          sec.classList.remove('hidden', 'tab-view-animate');
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        if (breadcrumbBar) breadcrumbBar.classList.remove('hidden');
+        if (activeTabLabel) activeTabLabel.textContent = meta.label;
+
+        allSections.forEach(sec => {
+          if (sec.id === meta.sectionId) {
+            sec.classList.remove('hidden', 'tab-view-animate');
+            void sec.offsetWidth;
+            sec.classList.add('tab-view-animate');
+          } else {
+            sec.classList.add('hidden');
+            sec.classList.remove('tab-view-animate');
+          }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function openAuditSection() {
+      openNavTab('packages');
+      setTimeout(() => {
+        const auditEl = document.getElementById('audit');
+        if (auditEl) {
+          auditEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          auditEl.style.boxShadow = '0 0 0 3px #D4AF37, 0 28px 60px -12px rgba(212, 175, 55, 0.55)';
+          setTimeout(() => {
+            auditEl.style.boxShadow = '';
+          }, 2200);
+        }
+      }, 80);
+    }
+
+    // Trade Switcher Data & Logic
+    const tradePresets = [
+      {
+        badge: 'BUILT EXCLUSIVELY FOR ROOFING CONTRACTORS',
+        headline: 'We Turn Local Roofers Into The <span class="font-serif italic font-bold gold-text-gradient">#1 Dominant Brand</span> In Their City.',
+        roi: '4.8x',
+        calcLabel: 'Section 05 · Interactive Roofing Profit & ROI Calculator',
+        jobLabel: 'Average Net Profit Per Roof Job:',
+        defaultProfit: 5500
+      },
+      {
+        badge: 'BUILT FOR WINDOWS & DOORS CONTRACTORS',
+        headline: 'We Turn Window &amp; Door Contractors Into The <span class="font-serif italic font-bold gold-text-gradient">#1 Trusted Brand</span> In Their City.',
+        roi: '5.2x',
+        calcLabel: 'Section 05 · Interactive Windows & Doors ROI Calculator',
+        jobLabel: 'Average Net Profit Per Window Project:',
+        defaultProfit: 6500
+      },
+      {
+        badge: 'BUILT FOR SIDING & SEAMLESS GUTTER CONTRACTORS',
+        headline: 'We Turn Exterior &amp; Siding Contractors Into The <span class="font-serif italic font-bold gold-text-gradient">#1 Choice</span> In Their City.',
+        roi: '4.6x',
+        calcLabel: 'Section 05 · Interactive Siding & Exterior ROI Calculator',
+        jobLabel: 'Average Net Profit Per Exterior Job:',
+        defaultProfit: 5000
+      },
+      {
+        badge: 'BUILT FOR SOLAR & EXTERIOR REMODELING',
+        headline: 'We Turn Solar &amp; Remodeling Pros Into The <span class="font-serif italic font-bold gold-text-gradient">#1 Market Leader</span> In Their City.',
+        roi: '5.5x',
+        calcLabel: 'Section 05 · Interactive Solar & Remodeling ROI Calculator',
+        jobLabel: 'Average Net Profit Per Installation:',
+        defaultProfit: 8500
+      }
+    ];
+
+    function selectTrade(idx) {
+      const preset = tradePresets[idx];
+      if (!preset) return;
+      document.getElementById('heroTradeBadge').textContent = preset.badge;
+      document.getElementById('heroHeadline').innerHTML = preset.headline;
+      const roiEl = document.getElementById('heroRoiMetric');
+      if (roiEl) roiEl.textContent = preset.roi;
+      document.getElementById('calcTradeLabel').textContent = preset.calcLabel;
+      document.getElementById('jobProfitLabel').textContent = preset.jobLabel;
+      document.getElementById('jobProfitSlider').value = preset.defaultProfit;
+      recalculateContractorROI();
+
+      [0, 1, 2, 3].forEach(i => {
+        const btn = document.getElementById('tradeBtn' + i);
+        if (i === idx) {
+          btn.className = 'px-4 py-2 rounded-full font-heading font-extrabold text-xs uppercase tracking-wider gold-gradient-bg text-obsidian-950 shadow-lg transition whitespace-nowrap';
+        } else {
+          btn.className = 'px-4 py-2 rounded-full font-heading font-bold text-xs uppercase tracking-wider bg-obsidian-800/90 hover:bg-obsidian-700 text-neutral-200 border border-gold-400/35 transition whitespace-nowrap';
+        }
+      });
+    }
+
+    // Organic Social Post Previewer Tab Switcher
+    function switchPostTab(index) {
+      [0, 1, 2, 3].forEach(i => {
+        const panel = document.getElementById('postPanel' + i);
+        const btn = document.getElementById('postTabBtn' + i);
+        if (i === index) {
+          panel.classList.remove('hidden');
+          btn.className = 'px-3.5 py-2 rounded-xl font-heading font-extrabold text-[11px] uppercase tracking-wider gold-gradient-bg text-obsidian-950 transition';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'px-3.5 py-2 rounded-xl font-heading font-bold text-[11px] uppercase tracking-wider text-white hover:text-gold-300 transition';
+        }
+      });
+    }
+
+    // Full-Bleed 60fps 3D Golden Wave & Rotating Crystalline Wireframe Prism Engine
+    (function initHero3DCanvas() {
+      const canvas = document.getElementById('hero3dCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = 0, height = 0, time = 0;
+      const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      window.addEventListener('mousemove', (e) => {
+        pointer.tx = (e.clientX / Math.max(1, window.innerWidth) - 0.5) * 2;
+        pointer.ty = (e.clientY / Math.max(1, window.innerHeight) - 0.5) * 2;
+      });
+
+      const baseVerts = [
+        [0, -1.35, 0],
+        [1, 0, 0],
+        [0, 0, 1],
+        [-1, 0, 0],
+        [0, 0, -1],
+        [0, 1.35, 0]
+      ];
+      const faces = [
+        [0, 1, 2], [0, 2, 3], [0, 3, 4], [0, 4, 1],
+        [5, 2, 1], [5, 3, 2], [5, 4, 3], [5, 1, 4]
+      ];
+
+      let crystals = [];
+
+      function resize() {
+        width = canvas.width = canvas.offsetWidth || window.innerWidth;
+        height = canvas.height = canvas.offsetHeight || 720;
+        const positions = [
+          { nx: 0.08, ny: 0.22, size: 54, speed: 0.008, depth: 28 },
+          { nx: 0.92, ny: 0.20, size: 68, speed: -0.007, depth: 36 },
+          { nx: 0.06, ny: 0.78, size: 62, speed: 0.006, depth: 32 },
+          { nx: 0.93, ny: 0.76, size: 56, speed: -0.009, depth: 30 },
+          { nx: 0.50, ny: 0.12, size: 42, speed: 0.009, depth: 20 },
+          { nx: 0.48, ny: 0.88, size: 46, speed: -0.006, depth: 22 }
+        ];
+        crystals = positions.map((p, idx) => ({
+          ...p,
+          rx: idx * 0.9,
+          ry: idx * 1.3,
+          rz: idx * 0.5,
+          phase: idx * 1.1
+        }));
+      }
+
+      function rotate3D(v, rx, ry, rz) {
+        let [x, y, z] = v;
+        let y1 = y * Math.cos(rx) - z * Math.sin(rx);
+        let z1 = y * Math.sin(rx) + z * Math.cos(rx);
+        let x2 = x * Math.cos(ry) + z1 * Math.sin(ry);
+        let z2 = -x * Math.sin(ry) + z1 * Math.cos(ry);
+        let x3 = x2 * Math.cos(rz) - y1 * Math.sin(rz);
+        let y3 = x2 * Math.sin(rz) + y1 * Math.cos(rz);
+        return [x3, y3, z2];
+      }
+
+      function draw3DRibbonMesh(baseY, amplitude, strandCount, speedDir) {
+        for (let s = 0; s < strandCount; s++) {
+          const depthFactor = s / Math.max(1, strandCount - 1);
+          const alpha = 0.08 + (1 - Math.abs(depthFactor - 0.5) * 1.6) * 0.28;
+          ctx.beginPath();
+          for (let x = -20; x <= width + 20; x += 18) {
+            const normX = x / Math.max(1, width);
+            const perspectiveZ = Math.sin(normX * Math.PI * 2.2 + time * speedDir + depthFactor * 1.8);
+            const y =
+              baseY +
+              Math.sin(normX * 4.5 + time * speedDir + s * 0.22) * amplitude +
+              perspectiveZ * 24 +
+              pointer.y * (18 * (depthFactor - 0.5));
+            if (x === -20) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          }
+          const grad = ctx.createLinearGradient(0, 0, width, 0);
+          grad.addColorStop(0, 'rgba(212, 175, 55, 0)');
+          grad.addColorStop(0.25, `rgba(212, 175, 55, ${alpha})`);
+          grad.addColorStop(0.5, `rgba(243, 229, 171, ${alpha * 1.25})`);
+          grad.addColorStop(0.75, `rgba(212, 175, 55, ${alpha})`);
+          grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = s === Math.floor(strandCount / 2) ? 1.8 : 1.05;
+          ctx.stroke();
+        }
+      }
+
+      function drawCrystal(c) {
+        c.rx += c.speed;
+        c.ry += c.speed * 1.25;
+        const floatY = Math.sin(time * 1.4 + c.phase) * 12;
+        const cx = c.nx * width + pointer.x * c.depth;
+        const cy = c.ny * height + floatY + pointer.y * c.depth;
+        const fov = 320;
+
+        const projected = baseVerts.map(v => {
+          const [rx, ry, rz] = rotate3D(v, c.rx, c.ry, c.rz);
+          const scale = fov / (fov + rz * 45);
+          return {
+            x: cx + rx * c.size * scale,
+            y: cy + ry * c.size * scale,
+            z: rz
+          };
+        });
+
+        faces.forEach((f, idx) => {
+          const p0 = projected[f[0]];
+          const p1 = projected[f[1]];
+          const p2 = projected[f[2]];
+          const avgZ = (p0.z + p1.z + p2.z) / 3;
+          const facetAlpha = Math.max(0.04, Math.min(0.22, (1 - avgZ) * 0.11));
+
+          ctx.beginPath();
+          ctx.moveTo(p0.x, p0.y);
+          ctx.lineTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.closePath();
+
+          ctx.fillStyle = idx % 2 === 0
+            ? `rgba(243, 229, 171, ${facetAlpha})`
+            : `rgba(154, 107, 22, ${facetAlpha * 0.9})`;
+          ctx.fill();
+
+          ctx.strokeStyle = `rgba(243, 229, 171, ${0.22 + facetAlpha * 1.4})`;
+          ctx.lineWidth = 1.1;
+          ctx.stroke();
+        });
+      }
+
+      function render() {
+        time += 0.015;
+        pointer.x += (pointer.tx - pointer.x) * 0.06;
+        pointer.y += (pointer.ty - pointer.y) * 0.06;
+
+        ctx.clearRect(0, 0, width, height);
+
+        draw3DRibbonMesh(height * 0.24, 34, 7, 1.0);
+        draw3DRibbonMesh(height * 0.78, 38, 7, -0.85);
+        crystals.forEach(drawCrystal);
+
+        requestAnimationFrame(render);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      render();
+    })();
+
+    // Interactive 3D Tilt + Radial Gold Spotlight on Cards
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+        const rotateX = ((y / rect.height) - 0.5) * -3.5;
+        const rotateY = ((x / rect.width) - 0.5) * 3.5;
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // Animated KPI Counters
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.kpi-counter').forEach(counter => {
+        const target = parseInt(counter.dataset.target, 10);
+        const suffix = counter.dataset.suffix || '';
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target / 35));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target + suffix;
+            clearInterval(timer);
+          } else {
+            counter.textContent = current + suffix;
+          }
+        }, 28);
+      });
+    });
+
+    // Contractor Profit & ROI Calculator
+    function recalculateContractorROI() {
+      const spend = parseFloat(document.getElementById('adSpendSlider').value);
+      const jobProfit = parseFloat(document.getElementById('jobProfitSlider').value);
+      document.getElementById('adSpendDisplay').textContent = '$' + spend.toLocaleString() + ' / mo';
+      document.getElementById('jobProfitDisplay').textContent = '$' + jobProfit.toLocaleString() + ' / job';
+
+      const leads = Math.max(15, Math.round(spend / 42));
+      const inspections = Math.max(10, Math.round(leads * 0.65));
+      const closed = Math.max(3, Math.round(inspections * 0.30));
+      const netProfit = closed * jobProfit;
+
+      document.getElementById('calcLeads').textContent = leads;
+      document.getElementById('calcInspections').textContent = inspections;
+      document.getElementById('calcClosed').textContent = closed;
+      document.getElementById('calcNetProfit').textContent = '$' + netProfit.toLocaleString() + ' / mo';
+    }
+
+    // 1 Contractor Per City & Trade Availability Checker
+    function verifyCityTerritory(e) {
+      e.preventDefault();
+      const city = document.getElementById('cityInput').value.trim();
+      if (!city) return;
+      document.getElementById('cityResultText').textContent = `Great news! "${city}" is currently OPEN under our 1 Contractor Per City & Trade exclusivity policy.`;
+      document.getElementById('cityResultBox').classList.remove('hidden');
+    }
+
+    // Package Pre-Selection & Smooth Scroll to Audit Form with Gold Glow
+    function selectPackageForAudit(tierName) {
+      openNavTab('packages');
+      const auditSection = document.getElementById('audit');
+      const selectEl = document.getElementById('auditTierSelect');
+      const formEl = document.getElementById('finalAuditForm');
+      const successEl = document.getElementById('finalAuditSuccess');
+
+      if (formEl && successEl) {
+        formEl.classList.remove('hidden');
+        successEl.classList.add('hidden');
+      }
+      if (selectEl) {
+        selectEl.value = tierName;
+      }
+      if (auditSection) {
+        setTimeout(() => {
+          auditSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          auditSection.style.boxShadow = '0 0 0 3px #D4AF37, 0 28px 60px -12px rgba(212, 175, 55, 0.55)';
+          setTimeout(() => {
+            auditSection.style.boxShadow = '';
+          }, 2200);
+        }, 80);
+      }
+    }
+
+    // Audit Form Submission
+    function submitFinalAudit(e) {
+      e.preventDefault();
+      document.getElementById('finalAuditForm').classList.add('hidden');
+      document.getElementById('finalAuditSuccess').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
